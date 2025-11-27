@@ -1,0 +1,635 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 1,
+        "cliente": "Lazaro Mimbela, Susana Mirtha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3145933,
+          -9.4688967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 2,
+        "cliente": "Rodriguez Cruz, Carmen Amparo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3151317,
+          -9.468535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 3,
+        "cliente": "Chero Roldan, Nina Soledad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.314018,
+          -9.470125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 4,
+        "cliente": "Ramirez Garay, Tania Jacqueline"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.315641,
+          -9.470339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 5,
+        "cliente": "Horna Leyva, Ofelia Orfilia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3158871,
+          -9.4700627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 6,
+        "cliente": "Chero Roldan, Lucy Maribel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.31597837,
+          -9.47016922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 7,
+        "cliente": "Matta Carbajo, Eliza Flor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.31602,
+          -9.47081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 8,
+        "cliente": "Angeles Ciriaco, Magda Celestina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.313718,
+          -9.470325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 9,
+        "cliente": "Roldan Villajuana, Rosa Maria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.313786,
+          -9.47026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 10,
+        "cliente": "Ruiz Loli, Socorro Violeta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.312538,
+          -9.470413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 11,
+        "cliente": "Castillo Zamudio, Roxona Elizabeth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3115283,
+          -9.4704817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 12,
+        "cliente": "Bodega Meche"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.311252,
+          -9.470496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 13,
+        "cliente": "Gutierrez Burgos, Anita Ysabel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.310882,
+          -9.470609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 14,
+        "cliente": "Melendez Romero, Valeria Del Pilar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3085283,
+          -9.472555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 15,
+        "cliente": "Paredes Rafaile, Ronal Victor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.31035353,
+          -9.4716178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 16,
+        "cliente": "Garcilazo Rosales, Ingrid Tatiana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.31219804,
+          -9.47094344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 17,
+        "cliente": "Ramirez Tello, Lili"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3127325,
+          -9.4719108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 18,
+        "cliente": "Jer├│nimo Huarca, Cristopher Anderso"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.2989024,
+          -9.4726437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 19,
+        "cliente": "Don De Paty"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.29565,
+          -9.47158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 20,
+        "cliente": "Huamanchumo Sanchez Javier Jaime"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3003447,
+          -9.47275847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 21,
+        "cliente": "Flores Vega, Shayuri Tha├▒ia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3011983,
+          -9.4713133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 22,
+        "cliente": "CIPRA OLIVAREZ, JULIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.30282253,
+          -9.4705359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 23,
+        "cliente": "Figueroa Alva, Dora Margarita"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.2953167,
+          -9.4712783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 24,
+        "cliente": "Raymundo Juarez, Gonzalo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.29900914,
+          -9.47658644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 25,
+        "cliente": "Sanchez Sanchez, Jeannet Julisa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.302187,
+          -9.477478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 26,
+        "cliente": "Geny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3017709,
+          -9.4762368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 27,
+        "cliente": "Siche Anhuaman, Patricia Yolanda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.29868,
+          -9.47531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 28,
+        "cliente": "Leon Broncano, Grimaldo Maximo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.29619,
+          -9.47487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 29,
+        "cliente": "Gonzales Angeles, Danyer Cesar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.34216862,
+          -9.46891199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 30,
+        "cliente": "Lazaro Morante, Isabel Rosmery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.34318989,
+          -9.47158862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 31,
+        "cliente": "Bodega Alexander"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.34769,
+          -9.44911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 32,
+        "cliente": "Villanueva Ramirez, Maria Maribel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.347765,
+          -9.449515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 33,
+        "cliente": "Cruz Lachira, Maria Teresa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.372829,
+          -9.462196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 34,
+        "cliente": "Silva Namuche, Shiamara Julissa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.372839,
+          -9.462186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 35,
+        "cliente": "Lachira Yamunaque, Maria Julia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.37345,
+          -9.463781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 36,
+        "cliente": "Robles Infantes, Avelina Teodora"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.372749,
+          -9.463468
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 37,
+        "cliente": "Lachira De Lopez, Maria Erminia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.373364,
+          -9.46358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 38,
+        "cliente": "Juarez Bereche, Marcos Naun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3727944,
+          -9.4620619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 39,
+        "cliente": "Mathews Mu├▒oz, Gladys Yasmi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.381548,
+          -9.4622883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 40,
+        "cliente": "Chero Escobedo, Stefany Joan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.384141,
+          -9.460428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 41,
+        "cliente": "Mimbela Arellano, Maria Magdalena"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.382824,
+          -9.460937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 42,
+        "cliente": "Cevicheria Dmar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.382833,
+          -9.460959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 43,
+        "cliente": "Jhonatan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.382026,
+          -9.462072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 44,
+        "cliente": "Sol├¡s Nima De Adanaque, Alizandra M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3818376,
+          -9.4619218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 45,
+        "cliente": "Leon Oliveros, Lizvet Fortuna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3162761,
+          -9.4704292
+        ]
+      }
+    }
+  ]
+}

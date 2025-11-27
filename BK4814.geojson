@@ -1,0 +1,243 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 1,
+        "cliente": "Lopez Horna, Jean Pool Edinson"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5727435,
+          -9.076988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 2,
+        "cliente": "Lyonell"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5554227,
+          -8.9995176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 3,
+        "cliente": "Vasquez Lopez, Terencia Ines"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58109,
+          -9.05405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 4,
+        "cliente": "Revilla Mesinas, Iris Tatiana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.582414,
+          -9.054765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 5,
+        "cliente": "Perez Vasquez, Maria Angelita"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.581539,
+          -9.055827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 6,
+        "cliente": "Paredes Guzman, Le├│nidas Baltasar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5815257,
+          -9.0554488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 7,
+        "cliente": "Vasquez Amancio, Sofia Esmelda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5807669,
+          -9.0551184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 8,
+        "cliente": "GOMEZ SALDANA, GABRIELA MARLENY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5799478,
+          -9.055887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 9,
+        "cliente": "Cordova Cotrina, Flor Esther"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.579918,
+          -9.055557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 10,
+        "cliente": "Lizarraga Tolentino, Luz Roxana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.57997607,
+          -9.05570157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 11,
+        "cliente": "Bodega Charito"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.57934364,
+          -9.05258005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 12,
+        "cliente": "Rojas Tapia, Leslit Fiorela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.580262,
+          -9.052992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 13,
+        "cliente": "Ragas Urbano, Paula Beatriz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58118,
+          -9.05295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 14,
+        "cliente": "Lopez Cotos, Elizabeth Catalina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58071,
+          -9.05154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 15,
+        "cliente": "Alva Bernuy, Sayuri Evelina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58058,
+          -9.05167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 16,
+        "cliente": "LI├æAN RUPAY, RAUL"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58124,
+          -9.05177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 17,
+        "cliente": "Horna Pesantes, Maria Isabel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.580797,
+          -9.052151
+        ]
+      }
+    }
+  ]
+}

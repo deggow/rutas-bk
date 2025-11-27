@@ -1,0 +1,201 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 1,
+        "cliente": "Lopez Rodriguez, Lucero Rosmary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.564634,
+          -9.071156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 2,
+        "cliente": "Distribuidora Fransule E.I.R.L."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5759255,
+          -9.0552405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 3,
+        "cliente": "Luis Alcantara, Dadigna Nelida"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58226,
+          -9.05433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 4,
+        "cliente": "Ramirez Estrada, Julia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58104,
+          -9.05502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 5,
+        "cliente": "Rodriguez Mendoza De Campos, Isabel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.583089,
+          -9.053993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 6,
+        "cliente": "Asuncion Vilchez, Karina Janett"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58506,
+          -9.058632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 7,
+        "cliente": "Alcantara Malca, Manuel Eliseo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.586816,
+          -9.059285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 8,
+        "cliente": "D violeta parrillas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58825,
+          -9.05884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 9,
+        "cliente": "DJhon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58737222,
+          -9.07023791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 10,
+        "cliente": "Cerna De La Cruz, Yolanda Carmen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.58793,
+          -9.071245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 11,
+        "cliente": "Asmat Mendoza, Wilmer Leo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.585475,
+          -9.06492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 12,
+        "cliente": "Lopez Huaman, Juan Manuel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.576822,
+          -9.087173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 13,
+        "cliente": "Velasquez Paredes, Angelica Flor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.579329,
+          -9.085592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seq": 14,
+        "cliente": "Distribuidora Fransule E.I.R.L."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.5759255,
+          -9.0552405
+        ]
+      }
+    }
+  ]
+}
