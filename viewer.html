@@ -126,7 +126,7 @@
     // Crear markers + lista lateral
     geojson.features.forEach((feature, index) => {
       const [lng, lat] = feature.geometry.coordinates;
-      const name = feature.properties.name;
+      const name = feature.properties.Cliente || "Sin nombre";
 
       const marker = new google.maps.Marker({
         position: { lat, lng },
