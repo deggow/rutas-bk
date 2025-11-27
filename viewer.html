@@ -26,22 +26,21 @@
 <div id="map"></div>
 
 <script>
-  // Obtener parámetro bk del URL
   const urlParams = new URLSearchParams(window.location.search);
   const bk = urlParams.get("bk");
 
-  // Variables globales
+  document.getElementById("ruta").textContent = bk;
+
   let map;
   let markers = [];
   let polyline = null;
-  let currentIndex = 0; // índice del punto actual
+  let currentIndex = 0;
 
-  // Colores de estados
   const COLOR_VISITED = "#8b8b8b";
-  const COLOR_CURRENT = "#FFD700"; // dorado
+  const COLOR_CURRENT = "#FFD700";
   const COLOR_PENDING = "#FF0000";
 
-  // Crear menú lateral
+  // ==== SIDEBAR ====
   const sidebar = document.createElement("div");
   sidebar.style.position = "absolute";
   sidebar.style.top = "60px";
@@ -56,7 +55,7 @@
   sidebar.innerHTML = `<h3>Ruta: ${bk}</h3><div id="routeList"></div>`;
   document.body.appendChild(sidebar);
 
-  // Botones siguiente/anterior
+  // ==== NAVIGATION BUTTONS ====
   const navButtons = document.createElement("div");
   navButtons.style.position = "absolute";
   navButtons.style.bottom = "40px";
@@ -71,7 +70,7 @@
   `;
   document.body.appendChild(navButtons);
 
-  // Botón para activar modo oscuro
+  // DARK MODE BUTTON
   const darkModeBtn = document.createElement("button");
   darkModeBtn.innerHTML = "🌙 Modo Oscuro";
   darkModeBtn.style.position = "absolute";
@@ -92,7 +91,6 @@
     map.setOptions({ styles: darkMode ? darkMapStyle : null });
   };
 
-  // Estilo oscuro para Google Maps
   const darkMapStyle = [
     { elementType: "geometry", stylers: [{ color: "#212121" }] },
     { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
@@ -108,31 +106,30 @@
   async function initMap() {
     document.getElementById("map").style.height = "100vh";
 
-    // Crear mapa
     map = new google.maps.Map(document.getElementById("map"), {
       zoom: 14,
       center: { lat: -9.05, lng: -78.59 },
       mapTypeControl: false
     });
 
-    // Cargar el archivo GeoJSON
+    // === LOAD GEOJSON ===
     const geojsonResponse = await fetch(`${bk}.geojson`);
     const geojson = await geojsonResponse.json();
 
     const routeList = document.getElementById("routeList");
-
     let path = [];
 
-    // Crear markers + lista lateral
-    geojson.features.forEach((feature, index) => {
+    geojson.features.forEach((feature) => {
+      const seq = feature.properties.seq;
+      const cliente = feature.properties.cliente || "Sin nombre";
+
       const [lng, lat] = feature.geometry.coordinates;
-      const name = feature.properties.Cliente || "Sin nombre";
 
       const marker = new google.maps.Marker({
         position: { lat, lng },
         map,
-        label: `${index + 1}`,
-        title: name,
+        label: `${seq}`,
+        title: cliente,
         icon: {
           path: google.maps.SymbolPath.CIRCLE,
           scale: 8,
@@ -143,29 +140,26 @@
         }
       });
 
-      // Popup
       const infowindow = new google.maps.InfoWindow({
-        content: `<b>${index + 1}. ${name}</b>`
+        content: `<b>${seq}. ${cliente}</b>`
       });
 
       marker.addListener("click", () => {
         infowindow.open({ anchor: marker, map });
-        focusPoint(index);
+        focusPoint(seq - 1);
       });
 
       markers.push(marker);
       path.push({ lat, lng });
 
-      // Lateral
       const item = document.createElement("div");
       item.style.padding = "6px 0";
       item.style.cursor = "pointer";
-      item.innerHTML = `${index + 1}. ${name}`;
-      item.onclick = () => focusPoint(index);
+      item.innerHTML = `${seq}. ${cliente}`;
+      item.onclick = () => focusPoint(seq - 1);
       routeList.appendChild(item);
     });
 
-    // Dibujar polilínea de la ruta
     polyline = new google.maps.Polyline({
       path: path,
       geodesic: true,
@@ -176,10 +170,8 @@
 
     polyline.setMap(map);
 
-    // Enfocar el primer punto
     focusPoint(0);
 
-    // Eventos botones
     document.getElementById("nextPoint").onclick = () => {
       if (currentIndex < markers.length - 1) focusPoint(currentIndex + 1);
     };
@@ -188,7 +180,6 @@
     };
   }
 
-  // Cambiar colores según estado
   function updateMarkerColors() {
     markers.forEach((marker, index) => {
       let color =
@@ -209,7 +200,6 @@
     });
   }
 
-  // Centrarse en un punto
   function focusPoint(index) {
     currentIndex = index;
     const m = markers[index];
@@ -220,7 +210,6 @@
 
   window.initMap = initMap;
 </script>
-
 
 <!-- Replace API KEY HERE -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoQCoq3gLrA1wc3arISscvdYyt__-e-gE&callback=initMap" async defer></script>
