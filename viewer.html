@@ -26,46 +26,201 @@
 <div id="map"></div>
 
 <script>
-  async function initMap() {
-    // 1. Get BK from URL parameters (?bk=BK4802)
-    const params = new URLSearchParams(window.location.search);
-    const bk = params.get("bk");  // example: BK4802
-    document.getElementById("ruta").innerText = bk;
+  // Obtener parámetro bk del URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const bk = urlParams.get("bk");
 
-    // 2. Initialize map
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -9.06, lng: -78.59 },
-      zoom: 13,
+  // Variables globales
+  let map;
+  let markers = [];
+  let polyline = null;
+  let currentIndex = 0; // índice del punto actual
+
+  // Colores de estados
+  const COLOR_VISITED = "#8b8b8b";
+  const COLOR_CURRENT = "#FFD700"; // dorado
+  const COLOR_PENDING = "#FF0000";
+
+  // Crear menú lateral
+  const sidebar = document.createElement("div");
+  sidebar.style.position = "absolute";
+  sidebar.style.top = "60px";
+  sidebar.style.left = "10px";
+  sidebar.style.width = "260px";
+  sidebar.style.maxHeight = "80vh";
+  sidebar.style.overflowY = "auto";
+  sidebar.style.background = "white";
+  sidebar.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
+  sidebar.style.padding = "10px";
+  sidebar.style.borderRadius = "8px";
+  sidebar.innerHTML = `<h3>Ruta: ${bk}</h3><div id="routeList"></div>`;
+  document.body.appendChild(sidebar);
+
+  // Botones siguiente/anterior
+  const navButtons = document.createElement("div");
+  navButtons.style.position = "absolute";
+  navButtons.style.bottom = "40px";
+  navButtons.style.left = "50%";
+  navButtons.style.transform = "translateX(-50%)";
+  navButtons.style.display = "flex";
+  navButtons.style.gap = "15px";
+
+  navButtons.innerHTML = `
+    <button id="prevPoint" style="padding:10px 20px; font-size:16px;">⬅ Anterior</button>
+    <button id="nextPoint" style="padding:10px 20px; font-size:16px;">Siguiente ➡</button>
+  `;
+  document.body.appendChild(navButtons);
+
+  // Botón para activar modo oscuro
+  const darkModeBtn = document.createElement("button");
+  darkModeBtn.innerHTML = "🌙 Modo Oscuro";
+  darkModeBtn.style.position = "absolute";
+  darkModeBtn.style.top = "10px";
+  darkModeBtn.style.right = "10px";
+  darkModeBtn.style.padding = "10px 15px";
+  darkModeBtn.style.background = "black";
+  darkModeBtn.style.color = "white";
+  darkModeBtn.style.border = "none";
+  darkModeBtn.style.borderRadius = "6px";
+  darkModeBtn.style.cursor = "pointer";
+  document.body.appendChild(darkModeBtn);
+
+  let darkMode = false;
+
+  darkModeBtn.onclick = () => {
+    darkMode = !darkMode;
+    map.setOptions({ styles: darkMode ? darkMapStyle : null });
+  };
+
+  // Estilo oscuro para Google Maps
+  const darkMapStyle = [
+    { elementType: "geometry", stylers: [{ color: "#212121" }] },
+    { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+    { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+    { elementType: "labels.text.stroke", stylers: [{ color: "#212121" }] },
+    {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [{ color: "#383838" }]
+    }
+  ];
+
+  async function initMap() {
+    document.getElementById("map").style.height = "100vh";
+
+    // Crear mapa
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: { lat: -9.05, lng: -78.59 },
+      mapTypeControl: false
     });
 
-    // 3. Load the GeoJSON
-    const res = await fetch(`${bk}.geojson`);
-    const geojson = await res.json();
+    // Cargar el archivo GeoJSON
+    const geojsonResponse = await fetch(`${bk}.geojson`);
+    const geojson = await geojsonResponse.json();
 
-    const bounds = new google.maps.LatLngBounds();
+    const routeList = document.getElementById("routeList");
 
-    geojson.features.forEach(f => {
-      const [lng, lat] = f.geometry.coordinates;
-      const { seq, cliente } = f.properties;
+    let path = [];
+
+    // Crear markers + lista lateral
+    geojson.features.forEach((feature, index) => {
+      const [lng, lat] = feature.geometry.coordinates;
+      const name = feature.properties.name;
 
       const marker = new google.maps.Marker({
         position: { lat, lng },
         map,
-        label: String(seq),
+        label: `${index + 1}`,
+        title: name,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          fillColor: COLOR_PENDING,
+          fillOpacity: 1,
+          strokeWeight: 1,
+          strokeColor: "white"
+        }
       });
 
+      // Popup
       const infowindow = new google.maps.InfoWindow({
-        content: `<strong>${seq}. ${cliente}</strong>`
+        content: `<b>${index + 1}. ${name}</b>`
       });
 
-      marker.addListener("click", () => infowindow.open(map, marker));
+      marker.addListener("click", () => {
+        infowindow.open({ anchor: marker, map });
+        focusPoint(index);
+      });
 
-      bounds.extend(marker.getPosition());
+      markers.push(marker);
+      path.push({ lat, lng });
+
+      // Lateral
+      const item = document.createElement("div");
+      item.style.padding = "6px 0";
+      item.style.cursor = "pointer";
+      item.innerHTML = `${index + 1}. ${name}`;
+      item.onclick = () => focusPoint(index);
+      routeList.appendChild(item);
     });
 
-    map.fitBounds(bounds);
+    // Dibujar polilínea de la ruta
+    polyline = new google.maps.Polyline({
+      path: path,
+      geodesic: true,
+      strokeColor: "#0066FF",
+      strokeOpacity: 1,
+      strokeWeight: 4
+    });
+
+    polyline.setMap(map);
+
+    // Enfocar el primer punto
+    focusPoint(0);
+
+    // Eventos botones
+    document.getElementById("nextPoint").onclick = () => {
+      if (currentIndex < markers.length - 1) focusPoint(currentIndex + 1);
+    };
+    document.getElementById("prevPoint").onclick = () => {
+      if (currentIndex > 0) focusPoint(currentIndex - 1);
+    };
   }
+
+  // Cambiar colores según estado
+  function updateMarkerColors() {
+    markers.forEach((marker, index) => {
+      let color =
+        index < currentIndex
+          ? COLOR_VISITED
+          : index === currentIndex
+          ? COLOR_CURRENT
+          : COLOR_PENDING;
+
+      marker.setIcon({
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: index === currentIndex ? 12 : 8,
+        fillColor: color,
+        fillOpacity: 1,
+        strokeWeight: 1,
+        strokeColor: "white"
+      });
+    });
+  }
+
+  // Centrarse en un punto
+  function focusPoint(index) {
+    currentIndex = index;
+    const m = markers[index];
+
+    map.panTo(m.getPosition());
+    updateMarkerColors();
+  }
+
+  window.initMap = initMap;
 </script>
+
 
 <!-- Replace API KEY HERE -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoQCoq3gLrA1wc3arISscvdYyt__-e-gE&callback=initMap" async defer></script>
