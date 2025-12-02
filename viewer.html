@@ -39,6 +39,10 @@
       margin-top: 0;
       font-size: 14px;
     }
+    .cliente {
+      padding: 4px 0;
+      border-bottom: 1px solid #eee;
+    }
   </style>
 </head>
 
@@ -48,6 +52,7 @@
 
 <script>
 async function loadRouteAndDraw() {
+
   // Obtener BK desde la URL
   const params = new URLSearchParams(window.location.search);
   const bk = params.get("bk") || "BK4802";
@@ -62,7 +67,7 @@ async function loadRouteAndDraw() {
   // 3) Construir string OSRM lon,lat;lon,lat;...
   const coordString = coords.map(c => c.join(",")).join(";");
 
-  // 4) Llamar a OSRM Directions (GRATIS, sin token)
+  // 4) Llamar OSRM (gratuito)
   const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson&steps=true`;
   const data = await fetch(url).then(r => r.json());
 
@@ -84,6 +89,7 @@ async function loadRouteAndDraw() {
   });
 
   map.on("load", () => {
+
     // 6) Dibujar ruta OSRM
     map.addSource("route", {
       type: "geojson",
@@ -118,19 +124,19 @@ async function loadRouteAndDraw() {
       }
     });
 
-    // 8) Ajustar a la ruta completa
+    // 8) Ajustar vista completa
     const bounds = new maplibregl.LngLatBounds();
     routeGeom.coordinates.forEach(c => bounds.extend(c));
     map.fitBounds(bounds, { padding: 40 });
 
-    // 9) Construir turn-by-turn
+    // 9) Panel de CLIENTES en secuencia
     const panel = document.getElementById("panel");
-    const steps = [];
-    route.legs.forEach(leg => leg.steps.forEach(s => steps.push(s)));
 
     panel.innerHTML =
-      `<h3>Indicaciones ${bk}</h3>` +
-      steps.map((s, i) => `<div>${i + 1}. ${s.maneuver.instruction}</div>`).join("");
+      `<h3>Clientes ${bk}</h3>` +
+      sorted.map((p, i) =>
+        `<div class="cliente"><b>${i + 1}.</b> ${p.properties.cliente}</div>`
+      ).join("");
   });
 }
 
