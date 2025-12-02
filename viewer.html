@@ -53,7 +53,7 @@
 
       // Marcadores
       sorted.forEach((f,i)=>{
-        new google.maps.Marker({
+        new google.maps.marker.AdvancedMarkerElement({
           position: { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] },
           map,
           label: `${i+1}`
@@ -81,7 +81,7 @@
       // Panel de clientes
       document.getElementById("panel").innerHTML =
         `<h3>Clientes ${bk}</h3>` +
-        sorted.map((p, i) => `<div class="cliente"><b>${i+1}.</b> ${p.properties.cliente}</div>`).join("");
+        sorted.map(f => `<div><b>${f.properties.seq}.</b> ${f.properties.cliente}</div>`).join("");
     }
   </script>
 
