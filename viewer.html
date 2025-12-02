@@ -79,9 +79,25 @@
       directionsRenderer.setDirections(result);
 
       // Panel de clientes
-      document.getElementById("panel").innerHTML =
-        `<h3>Clientes ${bk}</h3>` +
-        sorted.map(f => `<div><b>${f.properties.seq}.</b> ${f.properties.cliente}</div>`).join("");
+      // Crear panel de clientes
+      const panel = document.getElementById("panel");
+
+      panel.innerHTML = `<h3>Clientes ${bk}</h3>`;
+
+      sorted.forEach((f, i) => {
+        const div = document.createElement("div");
+        div.className = "cliente";
+        div.innerHTML = `<b>${f.properties.seq}.</b> ${f.properties.cliente}`;
+
+        // Al hacer clic → centrar en el marcador
+        div.onclick = () => {
+          map.panTo({ lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] });
+          map.setZoom(17);
+        };
+
+        panel.appendChild(div);
+      });
+
     }
   </script>
 
