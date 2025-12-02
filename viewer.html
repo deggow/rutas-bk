@@ -9,10 +9,12 @@
       height: 100%;
       font-family: system-ui, sans-serif;
     }
+
     #map {
       position: absolute;
       top: 0; bottom: 0; right: 0; left: 320px;
     }
+
     #panel {
       position: absolute;
       top: 0; left: 0;
@@ -23,19 +25,36 @@
       padding: 12px;
       box-shadow: 2px 0 8px rgba(0,0,0,0.2);
       z-index: 10;
-      font-size: 13px;
     }
-    #panel h3 {
-      margin: 0 0 8px 0;
+
+    /* ===== BOTONES 2x2 ===== */
+    #controlGrid {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 250px;
+      height: 250px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+      z-index: 20;
+    }
+
+    #controlGrid button {
+      padding: 15px;
+      background: #1976D2;
+      color: white;
+      border: none;
+      border-radius: 8px;
       font-size: 15px;
-    }
-    .cliente {
-      padding: 6px 4px;
-      border-bottom: 1px solid #eee;
       cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35);
     }
-    .cliente:hover {
-      background: #f5f5f5;
+
+    #controlGrid button:disabled {
+      background: #9ea3a8;
+      cursor: not-allowed;
     }
   </style>
 </head>
@@ -44,138 +63,171 @@
   <div id="panel"><em>Cargando clientes...</em></div>
   <div id="map"></div>
 
+  <!-- GRID DE BOTONES -->
+  <div id="controlGrid">
+    <button id="btnStart">Iniciar<br>Ruta</button>
+    <button id="btnGoto">Ir al<br>punto N</button>
+    <button id="btnArrived">He terminado<br>punto N</button>
+    <button id="btnEnd">Terminar<br>Ruta</button>
+  </div>
+
   <script>
-    async function init() {
-      try {
-        const params = new URLSearchParams(window.location.search);
-        const bk = params.get("bk") || "BK4802";
+    let sorted = [];
+    let coords = [];
+    let map, directionsRenderer;
+    let currentIndex = 0;      // punto actual
+    let hasArrived = false;    // si llegó o no
 
-        // 1) Cargar GeoJSON local
-        const resp = await fetch(`public/${bk}.geojson`);
-        if (!resp.ok) {
-          document.getElementById("panel").innerHTML =
-            "<b>Error:</b> No se pudo cargar el GeoJSON.";
-          console.error("Error cargando GeoJSON:", resp.status, resp.statusText);
-          return;
-        }
+    function loadState() {
+      currentIndex = Number(localStorage.getItem("currentIndex") || 0);
+      hasArrived = localStorage.getItem("hasArrived") === "true";
+      updateButtons();
+    }
 
-        const geo = await resp.json();
+    function saveState() {
+      localStorage.setItem("currentIndex", currentIndex);
+      localStorage.setItem("hasArrived", hasArrived);
+      updateButtons();
+    }
 
-        // 2) Ordenar por seq
-        const sorted = geo.features
-          .slice()
-          .sort((a, b) => a.properties.seq - b.properties.seq);
+    function updateButtons() {
+      document.getElementById("btnGoto").innerHTML = "Ir al<br>punto " + (currentIndex+1);
+      document.getElementById("btnArrived").innerHTML = "He terminado<br>punto " + (currentIndex+1);
 
-        if (!sorted.length) {
-          document.getElementById("panel").innerHTML =
-            "<b>Error:</b> No hay puntos en esta ruta.";
-          return;
-        }
+      document.getElementById("btnStart").disabled = currentIndex > 0;  
+      document.getElementById("btnGoto").disabled = false;
+      document.getElementById("btnArrived").disabled = false;
 
-        const coords = sorted.map(f => ({
-          lng: f.geometry.coordinates[0],
-          lat: f.geometry.coordinates[1]
-        }));
-
-        // 3) Crear mapa de Google centrado en el primer punto
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 14,
-          center: coords[0],
-          // mapId: "TU_MAP_ID_OPCIONAL"
-        });
-
-        // 4) Marcadores numerados
-        const markers = [];
-        sorted.forEach((f, i) => {
-          const pos = {
-            lat: f.geometry.coordinates[1],
-            lng: f.geometry.coordinates[0]
-          };
-          const marker = new google.maps.Marker({
-            position: pos,
-            map,
-            label: String(i + 1)
-          });
-          markers.push(marker);
-        });
-
-        // 5) Pedir la ruta a OSRM (sin límite de waypoints de Google)
-        let polyline = null;
-        if (coords.length >= 2) {
-          const coordString = coords
-            .map(c => `${c.lng},${c.lat}`)
-            .join(";");
-
-          const osrmUrl =
-            `https://router.project-osrm.org/route/v1/driving/${coordString}` +
-            `?overview=full&geometries=geojson&steps=false`;
-
-          const osrmResp = await fetch(osrmUrl);
-          const osrmData = await osrmResp.json();
-
-          if (
-            osrmData.code === "Ok" &&
-            osrmData.routes &&
-            osrmData.routes.length
-          ) {
-            const routeGeom = osrmData.routes[0].geometry;
-
-            const path = routeGeom.coordinates.map(([lng, lat]) => ({
-              lat,
-              lng
-            }));
-
-            polyline = new google.maps.Polyline({
-              path,
-              map,
-              strokeColor: "#007AFF",
-              strokeOpacity: 1.0,
-              strokeWeight: 5
-            });
-
-            // Ajustar vista a la ruta completa
-            const bounds = new google.maps.LatLngBounds();
-            path.forEach(p => bounds.extend(p));
-            map.fitBounds(bounds, { padding: 50 });
-          } else {
-            console.error("Respuesta OSRM inválida:", osrmData);
-          }
-        }
-
-        // 6) Panel izquierdo con lista de clientes en secuencia
-        const panel = document.getElementById("panel");
-        panel.innerHTML =
-          `<h3>Clientes ${bk}</h3>` +
-          sorted
-            .map((f, i) => {
-              const nombre =
-                f.properties.cliente || "(cliente sin nombre)";
-              return `<div class="cliente" data-index="${i}">
-                        <b>${i + 1}.</b> ${nombre}
-                      </div>`;
-            })
-            .join("");
-
-        // 7) Click en un cliente -> centra el mapa en su marcador
-        panel.addEventListener("click", (e) => {
-          const item = e.target.closest(".cliente");
-          if (!item) return;
-          const idx = Number(item.dataset.index);
-          const marker = markers[idx];
-          if (!marker) return;
-
-          map.panTo(marker.getPosition());
-          map.setZoom(17);
-        });
-      } catch (err) {
-        console.error(err);
-        document.getElementById("panel").innerHTML =
-          "<b>Error inesperado:</b> revisa la consola.";
+      if (currentIndex >= sorted.length - 1) {
+        document.getElementById("btnArrived").disabled = true;
       }
     }
 
-    // Para que el callback de Google Maps encuentre la función
-    window.init = init;
+    async function init() {
+      loadState();
+
+      const params = new URLSearchParams(window.location.search);
+      const bk = params.get("bk") || "BK4802";
+
+      // Cargar GeoJSON
+      const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
+      sorted = geo.features.slice().sort((a,b)=> a.properties.seq - b.properties.seq);
+
+      // Panel de clientes
+      document.getElementById("panel").innerHTML =
+        `<h3>Clientes ${bk}</h3>` +
+        sorted.map(f =>
+          `<div><b>${f.properties.seq}.</b> ${f.properties.cliente}</div>`
+        ).join("");
+
+      coords = sorted.map(f => ({
+        lat: f.geometry.coordinates[1],
+        lng: f.geometry.coordinates[0]
+      }));
+
+      // Inicializar Google Map
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: coords[0]
+      });
+
+      // Dibujar marcadores numerados
+      sorted.forEach((f, i) => {
+        new google.maps.Marker({
+          position: { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] },
+          map,
+          label: `${i+1}`
+        });
+      });
+
+      // Dibujar la ruta completa con OSRM
+      drawFullRouteWithOSRM();
+
+      // Conectar botones
+      document.getElementById("btnStart").onclick = startRoute;
+      document.getElementById("btnGoto").onclick = gotoCurrentPoint;
+      document.getElementById("btnArrived").onclick = confirmArrived;
+      document.getElementById("btnEnd").onclick = endRoute;
+
+      updateButtons();
+    }
+
+    async function drawFullRouteWithOSRM() {
+      const coordString = coords.map(c => `${c.lng},${c.lat}`).join(";");
+      const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson`;
+      const data = await fetch(url).then(r => r.json());
+
+      if (!data.routes?.length) return;
+
+      const routeGeom = data.routes[0].geometry;
+
+      new google.maps.Polyline({
+        path: routeGeom.coordinates.map(c => ({ lng: c[0], lat: c[1] })),
+        map: map,
+        strokeColor: "#007AFF",
+        strokeWeight: 5
+      });
+    }
+
+    // ===== BOTÓN 1 — INICIAR RUTA =====
+    async function startRoute() {
+      currentIndex = 0;
+      hasArrived = false;
+      saveState();
+
+      const userPos = await getCurrentLocation();
+      const dest = coords[0];
+      openGoogleMaps(userPos, dest);
+    }
+
+    // ===== BOTÓN 2 — IR AL PUNTO ACTUAL =====
+    async function gotoCurrentPoint() {
+      const userPos = await getCurrentLocation();
+      const dest = coords[currentIndex];  
+      openGoogleMaps(userPos, dest);
+    }
+
+    // ===== BOTÓN 3 — CONFIRMAR LLEGADA =====
+    function confirmArrived() {
+      hasArrived = true;
+
+      if (currentIndex < sorted.length - 1) {
+        currentIndex++;
+        hasArrived = false;
+      }
+
+      saveState();
+      alert("Punto completado. Ahora puedes ir al siguiente.");
+    }
+
+    // ===== BOTÓN 4 — FINALIZAR RUTA =====
+    function endRoute() {
+      localStorage.removeItem("currentIndex");
+      localStorage.removeItem("hasArrived");
+      alert("Ruta finalizada.");
+    }
+
+    // ===== UTILIDADES =====
+
+    async function getCurrentLocation() {
+      return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(
+          pos => resolve({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+          err => reject(err),
+          { enableHighAccuracy: true }
+        );
+      });
+    }
+
+    function openGoogleMaps(origin, dest) {
+      const url =
+        `https://www.google.com/maps/dir/?api=1` +
+        `&origin=${origin.lat},${origin.lng}` +
+        `&destination=${dest.lat},${dest.lng}` +
+        `&travelmode=driving`;
+
+      window.open(url, "_blank");
+    }
   </script>
 
   <!-- Sustituye YOUR_GOOGLE_MAPS_API_KEY por tu key real -->
