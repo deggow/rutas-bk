@@ -5,7 +5,7 @@
   <title>Navegación OSRM + MapLibre + OSM</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
-  <!-- MapLibre GL JS -->
+  <!-- MapLibre GL -->
   <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
   <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
 
@@ -36,10 +36,6 @@
       font-size: 12px;
       z-index: 10;
     }
-    #panel h3 {
-      margin-top: 0;
-      font-size: 14px;
-    }
     .cliente {
       padding: 4px 0;
       border-bottom: 1px solid #eee;
@@ -54,49 +50,43 @@
 <script>
 async function loadRouteAndDraw() {
 
-  // Obtener BK desde la URL
   const params = new URLSearchParams(window.location.search);
   const bk = params.get("bk") || "BK4802";
 
   // 1) Cargar GeoJSON
   const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
 
-  // 2) Ordenar puntos por secuencia
+  // 2) Ordenar puntos
   const sorted = geo.features.slice().sort((a, b) => a.properties.seq - b.properties.seq);
   const coords = sorted.map(f => f.geometry.coordinates);
 
-  // 3) Construir string para OSRM
+  // 3) OSRM
   const coordString = coords.map(c => c.join(",")).join(";");
-
-  // 4) Llamar OSRM (GRATUITO)
   const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson&steps=false`;
   const data = await fetch(url).then(r => r.json());
 
   if (!data.routes || !data.routes.length) {
     document.getElementById("panel").innerHTML = "<b>Error:</b> No se pudo generar la ruta.";
-    console.error("OSRM response:", data);
     return;
   }
 
   const route = data.routes[0];
-  const routeGeom = route.geometry;
 
-  // 5) Crear mapa con MapLibre usando OSM Bright
+  // 4) Crear mapa con estilo OSM COMPLETO
   const map = new maplibregl.Map({
     container: "map",
-    style: "https://tiles.stadiamaps.com/styles/osm_bright/style.json",
+    style: "https://demotiles.maplibre.org/style.json",   // <<<< MAPA REAL
     center: coords[0],
-    zoom: 15
+    zoom: 14
   });
 
   map.on("load", () => {
-
-    // 6) Dibujar la ruta OSRM
+    // Ruta
     map.addSource("route", {
       type: "geojson",
       data: {
         type: "Feature",
-        geometry: routeGeom
+        geometry: route.geometry
       }
     });
 
@@ -110,7 +100,7 @@ async function loadRouteAndDraw() {
       }
     });
 
-    // 7) Dibujar puntos (clientes)
+    // Puntos
     map.addSource("stops", { type: "geojson", data: geo });
 
     map.addLayer({
@@ -125,20 +115,18 @@ async function loadRouteAndDraw() {
       }
     });
 
-    // 8) Ajustar vista a la ruta completa
+    // Ajustar a ruta
     const bounds = new maplibregl.LngLatBounds();
-    routeGeom.coordinates.forEach(c => bounds.extend(c));
+    route.geometry.coordinates.forEach(c => bounds.extend(c));
     map.fitBounds(bounds, { padding: 40 });
 
-    // 9) Panel con lista de clientes
+    // Panel de clientes
     const panel = document.getElementById("panel");
-
     panel.innerHTML =
       `<h3>Clientes ${bk}</h3>` +
-      sorted.map((p, i) =>
-        `<div class="cliente"><b>${i + 1}.</b> ${p.properties.cliente}</div>`
+      sorted.map(
+        (p, i) => `<div class="cliente"><b>${i + 1}.</b> ${p.properties.cliente}</div>`
       ).join("");
-
   });
 }
 
