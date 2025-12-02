@@ -53,7 +53,7 @@
 
       // Marcadores
       sorted.forEach((f,i)=>{
-        new google.maps.marker.AdvancedMarkerElement({
+        new google.maps.Marker({
           position: { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] },
           map,
           label: `${i+1}`
