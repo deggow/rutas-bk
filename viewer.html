@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Navegación BK4802</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <!-- Mapbox GL JS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    #panel {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      max-width: 320px;
+      max-height: 85%;
+      overflow-y: auto;
+      background: rgba(255,255,255,0.95);
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      font-size: 12px;
+    }
+    #panel h3 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="panel"><em>Cargando ruta...</em></div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGVnZ292IiwiYSI6ImNtaW8yam5hNjAyYmIzY3B6ZXM3eXIzOHYifQ.NyysuDyZRFfE2ZE4qvG-kA';
+
+  async function loadRouteAndDraw() {
+    // 1) Cargar GeoJSON de puntos
+    const geo = await fetch('BK4802.geojson').then(r => r.json());
+
+    // 2) Ordenar por 'seq'
+    const sorted = geo.features.slice().sort((a, b) => {
+      return a.properties.seq - b.properties.seq;
+    });
+
+    // 3) Extraer coordenadas [lng, lat] en orden
+    const coords = sorted.map(f => f.geometry.coordinates);
+
+    // 4) Construir string lon,lat;lon,lat;...
+    const coordString = coords.map(c => c.join(',')).join(';');
+
+    // 5) Llamar a Directions API
+    const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${coordString}?geometries=geojson&steps=true&overview=full&access_token=${mapboxgl.accessToken}`;
+    const data = await fetch(url).then(r => r.json());
+
+    if (!data.routes || !data.routes.length) {
+      document.getElementById('panel').innerHTML = '<b>Error:</b> No se pudo generar la ruta.';
+      console.error('Directions API response:', data);
+      return;
+    }
+
+    const route = data.routes[0];
+    const routeGeom = route.geometry;
+
+    // 6) Crear mapa centrado en el primer punto
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: coords[0],
+      zoom: 15
+    });
+
+    map.on('load', () => {
+      // 7) Dibujar línea de la ruta
+      map.addSource('route', {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          properties: {},
+          geometry: routeGeom
+        }
+      });
+
+      map.addLayer({
+        id: 'route-line',
+        type: 'line',
+        source: 'route',
+        paint: {
+          'line-width': 6,
+          'line-color': '#007AFF'
+        }
+      });
+
+      // 8) Agregar puntos (clientes)
+      map.addSource('stops', {
+        type: 'geojson',
+        data: geo
+      });
+
+      map.addLayer({
+        id: 'stops-circle',
+        type: 'circle',
+        source: 'stops',
+        paint: {
+          'circle-radius': 4,
+          'circle-color': '#FF5722',
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#ffffff'
+        }
+      });
+
+      // 9) Ajustar vista a la ruta completa
+      const bounds = new mapboxgl.LngLatBounds();
+      routeGeom.coordinates.forEach(c => bounds.extend(c));
+      map.fitBounds(bounds, { padding: 40 });
+
+      // 10) Construir lista de instrucciones turn-by-turn
+      const panel = document.getElementById('panel');
+      const steps = [];
+      route.legs.forEach(leg => {
+        leg.steps.forEach(step => steps.push(step));
+      });
+
+      panel.innerHTML = '<h3>Indicaciones BK4802</h3>' +
+        steps.map((s, i) => {
+          return `<div>${i + 1}. ${s.maneuver.instruction}</div>`;
+        }).join('');
+    });
+  }
+
+  loadRouteAndDraw();
+</script>
+</body>
+</html>

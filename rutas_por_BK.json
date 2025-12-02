@@ -1,0 +1,3113 @@
+{
+  "BK4817": [
+    {
+      "cliente": "Corporacion mar y luna",
+      "latitud": -9.07777148,
+      "longitud": -78.59281272
+    },
+    {
+      "cliente": "Quesquen Lopez, Veronica Jackeline",
+      "latitud": -9.076525,
+      "longitud": -78.5969767
+    },
+    {
+      "cliente": "Valladares Rivera, Kathy Mercedes",
+      "latitud": -9.074121,
+      "longitud": -78.596865
+    },
+    {
+      "cliente": "Supermercados Favisa",
+      "latitud": -9.072441,
+      "longitud": -78.590133
+    },
+    {
+      "cliente": "TAMBO",
+      "latitud": -9.0753,
+      "longitud": -78.5937
+    },
+    {
+      "cliente": "Chauchi",
+      "latitud": -9.070275,
+      "longitud": -78.592915
+    },
+    {
+      "cliente": "Delgado Noriega, Ricardo Antonio",
+      "latitud": -9.07184208,
+      "longitud": -78.58936344
+    },
+    {
+      "cliente": "MUNAYS Chimbote",
+      "latitud": -9.07344287,
+      "longitud": -78.5957207
+    },
+    {
+      "cliente": "Cuba Honorio, Segundo Francisco",
+      "latitud": -9.071797,
+      "longitud": -78.586064
+    },
+    {
+      "cliente": "Fuente De Soda Fko",
+      "latitud": -9.07463,
+      "longitud": -78.597634
+    },
+    {
+      "cliente": "Diaz Leon, Jose Eduardo",
+      "latitud": -9.075565,
+      "longitud": -78.600406
+    },
+    {
+      "cliente": "Garcia Gonz├ílez, Roberto Carlos",
+      "latitud": -9.07322697,
+      "longitud": -78.59830657
+    },
+    {
+      "cliente": "Bod Gonzales",
+      "latitud": -9.0676442,
+      "longitud": -78.5931769
+    },
+    {
+      "cliente": "Multiservicios ROOLI",
+      "latitud": -9.0704708,
+      "longitud": -78.5910459
+    },
+    {
+      "cliente": "Plaza Vea - Chimbote",
+      "latitud": -9.07801,
+      "longitud": -78.589203
+    },
+    {
+      "cliente": "Bodega Amelia",
+      "latitud": -9.04213,
+      "longitud": -78.59259
+    },
+    {
+      "cliente": "Medina Terrones, Umbelina",
+      "latitud": -9.0424071,
+      "longitud": -78.5929798
+    },
+    {
+      "cliente": "Castro Carranza, Benita",
+      "latitud": -9.040904,
+      "longitud": -78.599546
+    },
+    {
+      "cliente": "Principe Gonzales, Nohemy",
+      "latitud": -9.04152201,
+      "longitud": -78.59508346
+    },
+    {
+      "cliente": "Bodega Thiago",
+      "latitud": -9.042391,
+      "longitud": -78.59431
+    },
+    {
+      "cliente": "De La Cruz Cruz, Elmer",
+      "latitud": -9.04214,
+      "longitud": -78.59242
+    },
+    {
+      "cliente": "Crisostomo Gadea, Henry Aldair",
+      "latitud": -9.0438864,
+      "longitud": -78.593985
+    },
+    {
+      "cliente": "Lopez Villanueva, Rosa",
+      "latitud": -9.0437383,
+      "longitud": -78.5931317
+    },
+    {
+      "cliente": "Ferrer Jara, Pulqueria Fedelina",
+      "latitud": -9.0433583,
+      "longitud": -78.592735
+    },
+    {
+      "cliente": "Variedades JBA",
+      "latitud": -9.04468,
+      "longitud": -78.59325
+    },
+    {
+      "cliente": "Cruz Valeriano, Santos Camila",
+      "latitud": -9.045,
+      "longitud": -78.592993
+    },
+    {
+      "cliente": "Bodega Mejia",
+      "latitud": -9.0429666,
+      "longitud": -78.5904633
+    },
+    {
+      "cliente": "Cenepo Chisquipama, Katerin Del Pil",
+      "latitud": -9.03844,
+      "longitud": -78.59231
+    },
+    {
+      "cliente": "Roncal Alba De Acero, Liliana Arece",
+      "latitud": -9.0360333,
+      "longitud": -78.59234
+    },
+    {
+      "cliente": "Guevara Cabrera, Lizeth Evelyn",
+      "latitud": -9.03686,
+      "longitud": -78.59371
+    },
+    {
+      "cliente": "Aponte Santisteban, Brumel Walter",
+      "latitud": -9.0398094,
+      "longitud": -78.5911614
+    },
+    {
+      "cliente": "Rios Rios Anti Portan",
+      "latitud": -9.043524,
+      "longitud": -78.58673
+    },
+    {
+      "cliente": "Bodega Valderrama",
+      "latitud": -9.0430683,
+      "longitud": -78.5880867
+    },
+    {
+      "cliente": "OBLEA RIVERA, LESLIE",
+      "latitud": -9.043294,
+      "longitud": -78.587879
+    },
+    {
+      "cliente": "SUYON RAMOS, MARIDEL UDELIA",
+      "latitud": -9.043377,
+      "longitud": -78.585817
+    },
+    {
+      "cliente": "Aquino Damian",
+      "latitud": -9.044273,
+      "longitud": -78.583627
+    },
+    {
+      "cliente": "Morales Silva, Marilin Jovana",
+      "latitud": -9.0441481,
+      "longitud": -78.5838109
+    },
+    {
+      "cliente": "C├│rdoba Herrera, Eugenio Anselmo",
+      "latitud": -9.0380617,
+      "longitud": -78.5871617
+    },
+    {
+      "cliente": "GARCIA LOLI, STEFANY",
+      "latitud": -9.03769188,
+      "longitud": -78.5872564
+    },
+    {
+      "cliente": "More Guardado, Martha Soledad",
+      "latitud": -9.03884,
+      "longitud": -78.587483
+    },
+    {
+      "cliente": "Angulo Apolitano, Lorenzo",
+      "latitud": -9.040086,
+      "longitud": -78.582674
+    },
+    {
+      "cliente": "├æique Rojas, Jennifer Eleine",
+      "latitud": -9.040696,
+      "longitud": -78.582808
+    },
+    {
+      "cliente": "Yndalecio Vasquez, Edita Emerita",
+      "latitud": -9.0411104,
+      "longitud": -78.585182
+    },
+    {
+      "cliente": "Sanchez Chungas, Lina Judith",
+      "latitud": -9.0388514,
+      "longitud": -78.583818
+    },
+    {
+      "cliente": "Bodega Elsa",
+      "latitud": -9.03844995,
+      "longitud": -78.58441067
+    },
+    {
+      "cliente": "Balois Linan, Zara Noemi",
+      "latitud": -9.04047,
+      "longitud": -78.586144
+    },
+    {
+      "cliente": "Maquera Naves, Anita Eva",
+      "latitud": -9.04424223,
+      "longitud": -78.58584488
+    },
+    {
+      "cliente": "Mendoza Morales, Maira Mirella",
+      "latitud": -9.0442953,
+      "longitud": -78.5911728
+    },
+    {
+      "cliente": "Cespedes Bancayan De Huaman, Santos",
+      "latitud": -9.044883,
+      "longitud": -78.591608
+    }
+  ],
+  "BK4811": [
+    {
+      "cliente": "Llerena Manrique, Rosa Ysabel",
+      "latitud": -9.0523196,
+      "longitud": -78.5834834
+    },
+    {
+      "cliente": "Casahuaman Peres, Olegaria",
+      "latitud": -9.051394,
+      "longitud": -78.583093
+    },
+    {
+      "cliente": "Llerena Salda├▒a, Henry Oswaldo",
+      "latitud": -9.0500045,
+      "longitud": -78.5813885
+    },
+    {
+      "cliente": "Alejos Sabino, Elmer Alberto",
+      "latitud": -9.050486,
+      "longitud": -78.583537
+    },
+    {
+      "cliente": "Bodega Gladys",
+      "latitud": -9.049687,
+      "longitud": -78.583557
+    },
+    {
+      "cliente": "Ramirez Robles, Edith Aberli",
+      "latitud": -9.0479877,
+      "longitud": -78.5837112
+    },
+    {
+      "cliente": "Bodega Kelly",
+      "latitud": -9.048962,
+      "longitud": -78.584823
+    },
+    {
+      "cliente": "Lavado Martell, Marina",
+      "latitud": -9.048688,
+      "longitud": -78.584837
+    },
+    {
+      "cliente": "Arteaga Rodriguez, Angela Alcira",
+      "latitud": -9.04944,
+      "longitud": -78.58497
+    },
+    {
+      "cliente": "Bodega Elissa",
+      "latitud": -9.049645,
+      "longitud": -78.584444
+    },
+    {
+      "cliente": "Atavios Qui├▒ones, Katherinee Haydee",
+      "latitud": -9.05028,
+      "longitud": -78.585895
+    },
+    {
+      "cliente": "Zavaleta Mi├▒ano, Roxana Leny",
+      "latitud": -9.052935,
+      "longitud": -78.5827667
+    },
+    {
+      "cliente": "Ruby Colquis",
+      "latitud": -9.0507423,
+      "longitud": -78.58096493
+    },
+    {
+      "cliente": "Cosalean Alva, Antero",
+      "latitud": -9.050843,
+      "longitud": -78.581674
+    },
+    {
+      "cliente": "Huamancondor Campos, Donna Danaes",
+      "latitud": -9.05015612,
+      "longitud": -78.5810502
+    },
+    {
+      "cliente": "Genovez Corzo, Nilda Judit",
+      "latitud": -9.048705,
+      "longitud": -78.590825
+    },
+    {
+      "cliente": "Moreno Vergaray, Maximo Claudio",
+      "latitud": -9.04635,
+      "longitud": -78.589539
+    },
+    {
+      "cliente": "Martinez Murillo, Carmen Jovany",
+      "latitud": -9.046048,
+      "longitud": -78.589242
+    },
+    {
+      "cliente": "Martinez Valle, Luz Elizabeth",
+      "latitud": -9.04546,
+      "longitud": -78.590772
+    },
+    {
+      "cliente": "Trujillo Alvites De Moreno, Jeronim",
+      "latitud": -9.04648,
+      "longitud": -78.58948
+    },
+    {
+      "cliente": "Pinedo De Moreno, Domiciana",
+      "latitud": -9.04699,
+      "longitud": -78.58904
+    },
+    {
+      "cliente": "Linares De Rojas, Julia",
+      "latitud": -9.04617,
+      "longitud": -78.58843
+    },
+    {
+      "cliente": "Ulloa Capa, Christian Joel",
+      "latitud": -9.048879,
+      "longitud": -78.586979
+    },
+    {
+      "cliente": "Alejos Quispe, Cecilia",
+      "latitud": -9.05245,
+      "longitud": -78.58414
+    },
+    {
+      "cliente": "Gonzales Menacho, Rosa Carlota",
+      "latitud": -9.04994,
+      "longitud": -78.58978
+    },
+    {
+      "cliente": "Esquivel Vilchez, Mirtha Rosa",
+      "latitud": -9.045058,
+      "longitud": -78.593579
+    },
+    {
+      "cliente": "Rumaldo Vasquez, Donita",
+      "latitud": -9.04546773,
+      "longitud": -78.59289751
+    },
+    {
+      "cliente": "Matta Agreda, Betty Vanesa",
+      "latitud": -9.04618,
+      "longitud": -78.59229
+    },
+    {
+      "cliente": "Arroyo Lopez De Mio, Maria Hilda",
+      "latitud": -9.04638,
+      "longitud": -78.59214
+    },
+    {
+      "cliente": "Castro Reyes, Francisco",
+      "latitud": -9.04691,
+      "longitud": -78.59169
+    },
+    {
+      "cliente": "Rodriguez Carbajal, Santos Julia",
+      "latitud": -9.04695,
+      "longitud": -78.5916
+    },
+    {
+      "cliente": "Brice├▒o Cardenas De Caro, Maria Ale",
+      "latitud": -9.04749,
+      "longitud": -78.59192
+    },
+    {
+      "cliente": "Bravo Garcia, Jesus Manuela",
+      "latitud": -9.04651,
+      "longitud": -78.59109
+    },
+    {
+      "cliente": "Torres Chavez, Cristina Amanda",
+      "latitud": -9.047198,
+      "longitud": -78.590728
+    },
+    {
+      "cliente": "Culqui Cortez, Pilar Soledad",
+      "latitud": -9.0484867,
+      "longitud": -78.5891683
+    },
+    {
+      "cliente": "Servicios corporativos Siloe e.i.r.",
+      "latitud": -9.047088,
+      "longitud": -78.589714
+    },
+    {
+      "cliente": "Do├▒a Olguita",
+      "latitud": -9.048435,
+      "longitud": -78.588346
+    },
+    {
+      "cliente": ".",
+      "latitud": -9.047802,
+      "longitud": -78.588139
+    },
+    {
+      "cliente": "Garcia Pablo, Carlos Manuel",
+      "latitud": -9.04934194,
+      "longitud": -78.58772634
+    },
+    {
+      "cliente": "Santos Silva Vda De Paz, Teresa",
+      "latitud": -9.04726,
+      "longitud": -78.5859884
+    },
+    {
+      "cliente": "Lopez De La Cruz, Wilder Alfonso",
+      "latitud": -9.047244,
+      "longitud": -78.585946
+    },
+    {
+      "cliente": "Sullon Villegas, Santos",
+      "latitud": -9.04679,
+      "longitud": -78.58562
+    },
+    {
+      "cliente": "Taboada Yarleque, Leonidas",
+      "latitud": -9.047065,
+      "longitud": -78.58719
+    },
+    {
+      "cliente": "Espinoza Rojas De Perez, Margarita",
+      "latitud": -9.048192,
+      "longitud": -78.587825
+    },
+    {
+      "cliente": "Huertas Poicon, Mar├¡a Isidora",
+      "latitud": -9.047445,
+      "longitud": -78.58732
+    },
+    {
+      "cliente": "Bodega Nilda",
+      "latitud": -9.046465,
+      "longitud": -78.586974
+    },
+    {
+      "cliente": "Prieto Carrion, Norma Umbelina",
+      "latitud": -9.0467,
+      "longitud": -78.58761
+    },
+    {
+      "cliente": "Huertas Poicon, Natividad Delaluz",
+      "latitud": -9.04709,
+      "longitud": -78.58668
+    },
+    {
+      "cliente": "Mendoza Vilcayauri, Wilfredo Manuel",
+      "latitud": -9.04813,
+      "longitud": -78.58593
+    },
+    {
+      "cliente": "Gavirondo Romero, Michell",
+      "latitud": -9.04879002,
+      "longitud": -78.58612831
+    },
+    {
+      "cliente": "FERRE CANOVA, AARON",
+      "latitud": -9.0482368,
+      "longitud": -78.5861158
+    },
+    {
+      "cliente": "Cruz Escamilo, Sonia Dina",
+      "latitud": -9.0485828,
+      "longitud": -78.5868292
+    },
+    {
+      "cliente": "Rodriguez Miranda, Kelly Marilyn",
+      "latitud": -9.048573,
+      "longitud": -78.58686
+    },
+    {
+      "cliente": "Adriano",
+      "latitud": -9.05416526,
+      "longitud": -78.58442848
+    },
+    {
+      "cliente": "Capristano Herreda, Billy Daniel",
+      "latitud": -9.054858,
+      "longitud": -78.584683
+    },
+    {
+      "cliente": "Paucar Aguirre, Lesli Yulisa",
+      "latitud": -9.044981,
+      "longitud": -78.588463
+    },
+    {
+      "cliente": "Alvarez Yanamango, Reyna Margarita",
+      "latitud": -9.0448696,
+      "longitud": -78.5878851
+    },
+    {
+      "cliente": "Siccha Chiroque, Isabel Marilyn",
+      "latitud": -9.044956,
+      "longitud": -78.588495
+    },
+    {
+      "cliente": "Quispe Matta, Katerine Caroli",
+      "latitud": -9.04339,
+      "longitud": -78.59017
+    },
+    {
+      "cliente": "Picon Medina, Adriana",
+      "latitud": -9.0444186,
+      "longitud": -78.5902866
+    }
+  ],
+  "BK4809": [
+    {
+      "cliente": "Ramon Moreno, Liliana Pilar",
+      "latitud": -9.265254,
+      "longitud": -78.474777
+    },
+    {
+      "cliente": "Calderon Diaz, Ricardo Jaime",
+      "latitud": -9.265384,
+      "longitud": -78.474468
+    },
+    {
+      "cliente": "Diaz Rodriguez, Viviana Milagros",
+      "latitud": -9.265453,
+      "longitud": -78.474158
+    },
+    {
+      "cliente": "Melgarejo Pablo, Timotea Feliciana",
+      "latitud": -9.263466,
+      "longitud": -78.488763
+    },
+    {
+      "cliente": "Valeriano Diaz, Jairo Brayan",
+      "latitud": -9.26276,
+      "longitud": -78.4904
+    },
+    {
+      "cliente": "Mimi",
+      "latitud": -9.262276,
+      "longitud": -78.490177
+    },
+    {
+      "cliente": "Toledo Gaviola De Amaya, Nelly Edel",
+      "latitud": -9.26283,
+      "longitud": -78.49179
+    },
+    {
+      "cliente": "LOPEZ VILELA, KEERMIN",
+      "latitud": -9.26276229,
+      "longitud": -78.49189512
+    },
+    {
+      "cliente": "Montanez Villarreal, Elvira Irene",
+      "latitud": -9.26274,
+      "longitud": -78.491939
+    },
+    {
+      "cliente": "Castro Lopez, Ildefonso",
+      "latitud": -9.26186,
+      "longitud": -78.49307
+    },
+    {
+      "cliente": "OCHOA SAAVEDRA, MADIAN JOSE",
+      "latitud": -9.261281,
+      "longitud": -78.495487
+    },
+    {
+      "cliente": "Yuliza",
+      "latitud": -9.26031443,
+      "longitud": -78.49571415
+    },
+    {
+      "cliente": "Quito Sarazu, Herlinda Ruth",
+      "latitud": -9.261299,
+      "longitud": -78.495765
+    },
+    {
+      "cliente": "Ruiz Carranza, Merly Fressia",
+      "latitud": -9.264288,
+      "longitud": -78.495576
+    },
+    {
+      "cliente": "Rondan Flores, Keysi Greecel",
+      "latitud": -9.263314,
+      "longitud": -78.496077
+    },
+    {
+      "cliente": "Baylon Cayetano, Carmen Teresa",
+      "latitud": -9.262358,
+      "longitud": -78.4962686
+    },
+    {
+      "cliente": "Bodega Cerna",
+      "latitud": -9.26155,
+      "longitud": -78.49623
+    },
+    {
+      "cliente": "Alfaro Sanchez, Luisa Julia",
+      "latitud": -9.259942,
+      "longitud": -78.496204
+    },
+    {
+      "cliente": "Restaurante El Rancho",
+      "latitud": -9.25883,
+      "longitud": -78.49635
+    },
+    {
+      "cliente": "Huaman Suxe, Jesus",
+      "latitud": -9.259164,
+      "longitud": -78.4964372
+    },
+    {
+      "cliente": "Meneses Rumiche, Arnulfo",
+      "latitud": -9.26134023,
+      "longitud": -78.49707214
+    },
+    {
+      "cliente": "Cayetano Bernaldo, Cecilia Yancy",
+      "latitud": -9.2619261,
+      "longitud": -78.4974825
+    },
+    {
+      "cliente": "Flores Cortijo, Edita Susana",
+      "latitud": -9.261904,
+      "longitud": -78.497058
+    },
+    {
+      "cliente": "Costa Brava",
+      "latitud": -9.263668,
+      "longitud": -78.496341
+    },
+    {
+      "cliente": "Huaman Llempen, Gloria Nelida",
+      "latitud": -9.2638041,
+      "longitud": -78.497684
+    },
+    {
+      "cliente": "Grupo Geomar Empresarial E.I.R.L",
+      "latitud": -9.263385,
+      "longitud": -78.49673
+    },
+    {
+      "cliente": "Ramos Santos, Julisa Denisse",
+      "latitud": -9.2637383,
+      "longitud": -78.4959467
+    },
+    {
+      "cliente": "Nicolas Franco, Iris Liliana",
+      "latitud": -9.263619,
+      "longitud": -78.494755
+    },
+    {
+      "cliente": "Vicos Soto, Jaquelin Del Pilar",
+      "latitud": -9.263976,
+      "longitud": -78.493507
+    },
+    {
+      "cliente": "Loloy Chavez, Nelida Hermelinda",
+      "latitud": -9.262779,
+      "longitud": -78.493732
+    },
+    {
+      "cliente": "Medina De Aponte, Olga Santos",
+      "latitud": -9.262774,
+      "longitud": -78.493655
+    },
+    {
+      "cliente": "Bodega andy",
+      "latitud": -9.2620689,
+      "longitud": -78.4920666
+    },
+    {
+      "cliente": "Perez Martinez, Aliz Aracelly",
+      "latitud": -9.262862,
+      "longitud": -78.490405
+    },
+    {
+      "cliente": "RAMOS MILLA, DONATA",
+      "latitud": -9.317994,
+      "longitud": -78.475306
+    },
+    {
+      "cliente": "Pastor Huamanchumo, Yohana Medalid",
+      "latitud": -9.319713,
+      "longitud": -78.475665
+    },
+    {
+      "cliente": "Beltran Huamanchumo, Graciela Isabe",
+      "latitud": -9.31939406,
+      "longitud": -78.47600568
+    },
+    {
+      "cliente": "BAZAR BRIANNA",
+      "latitud": -9.318326,
+      "longitud": -78.476799
+    },
+    {
+      "cliente": "Toro Mendoza, Teodosia Marcelina",
+      "latitud": -9.362205,
+      "longitud": -78.407557
+    },
+    {
+      "cliente": "Morales Cordova, Petronila",
+      "latitud": -9.360765,
+      "longitud": -78.41027
+    },
+    {
+      "cliente": "Torres Chamorro, Marithza",
+      "latitud": -9.360768,
+      "longitud": -78.410273
+    },
+    {
+      "cliente": "Mendez Galindo, Juan",
+      "latitud": -9.36087376,
+      "longitud": -78.41051787
+    },
+    {
+      "cliente": "Berrocal Aguilar, Hugo Alfonso",
+      "latitud": -9.362994,
+      "longitud": -78.408568
+    },
+    {
+      "cliente": "Gadea Rincon, Jacqueline Edith",
+      "latitud": -9.36394,
+      "longitud": -78.408595
+    },
+    {
+      "cliente": "Pedro",
+      "latitud": -9.366654,
+      "longitud": -78.409025
+    },
+    {
+      "cliente": "Lliuya Morales, Florencio Jony",
+      "latitud": -9.369601,
+      "longitud": -78.410806
+    },
+    {
+      "cliente": "Churano Macedo, Silvio Raul",
+      "latitud": -9.368821,
+      "longitud": -78.4094915
+    },
+    {
+      "cliente": "Garc├¡a Hern├índez, Jos├® Gregorio",
+      "latitud": -9.366185,
+      "longitud": -78.407567
+    },
+    {
+      "cliente": "Bodega",
+      "latitud": -9.36515572,
+      "longitud": -78.40675282
+    },
+    {
+      "cliente": "Rosales Paredes, Luis Eduardo",
+      "latitud": -9.26162,
+      "longitud": -78.49422
+    },
+    {
+      "cliente": "Rosales Paredes, Jorge",
+      "latitud": -9.26162,
+      "longitud": -78.49422
+    },
+    {
+      "cliente": "Mego Iparraguirre, Brenda Yesenia",
+      "latitud": -9.264212,
+      "longitud": -78.498321
+    },
+    {
+      "cliente": "Alegre Canchano, Magna Alfonsina",
+      "latitud": -9.2636334,
+      "longitud": -78.4936512
+    },
+    {
+      "cliente": "Paredes Sanchez, Cesar Americo",
+      "latitud": -9.2119739,
+      "longitud": -78.4839303
+    },
+    {
+      "cliente": "Loayza Figueroa, Jhon Pool",
+      "latitud": -9.21221,
+      "longitud": -78.48413
+    },
+    {
+      "cliente": "Loayza Figueroa, Randy Daniel",
+      "latitud": -9.21221,
+      "longitud": -78.48413
+    },
+    {
+      "cliente": "Restaurant Jibaro",
+      "latitud": -9.2109,
+      "longitud": -78.483516
+    },
+    {
+      "cliente": "Gomez Alegre, Maria Eloisa",
+      "latitud": -9.21259,
+      "longitud": -78.48436
+    },
+    {
+      "cliente": "Diaz Gomez, Oscar Adan",
+      "latitud": -9.2097622,
+      "longitud": -78.4830845
+    },
+    {
+      "cliente": "Ruiz Saavedra, Robert Silver",
+      "latitud": -9.2628611,
+      "longitud": -78.4914574
+    },
+    {
+      "cliente": "Bejar Aguilar, Pamela Adelaida",
+      "latitud": -9.365711,
+      "longitud": -78.408673
+    }
+  ],
+  "BK4804": [
+    {
+      "cliente": "Encomenderia Castillo'S",
+      "latitud": -9.11963,
+      "longitud": -78.51268
+    },
+    {
+      "cliente": "Comercial Sonia",
+      "latitud": -9.11978,
+      "longitud": -78.51232
+    },
+    {
+      "cliente": "Gallardo Chero, Bernabe",
+      "latitud": -9.119534,
+      "longitud": -78.510788
+    },
+    {
+      "cliente": "Jimenez Roncal, Rodolfo Florencio",
+      "latitud": -9.121778,
+      "longitud": -78.51007
+    },
+    {
+      "cliente": "Bodega Universitaria",
+      "latitud": -9.1218058,
+      "longitud": -78.51059985
+    },
+    {
+      "cliente": "FIESTAS LANDA, ROSA",
+      "latitud": -9.12127104,
+      "longitud": -78.51113344
+    },
+    {
+      "cliente": "Multiservicios & Billar Bola 8 E.I.",
+      "latitud": -9.121197,
+      "longitud": -78.51127
+    },
+    {
+      "cliente": "Lopez Colchado, Yeimis Gardenia",
+      "latitud": -9.12013,
+      "longitud": -78.51024
+    },
+    {
+      "cliente": "Colchado Vasquez, Merly Ysabel",
+      "latitud": -9.120063,
+      "longitud": -78.510123
+    },
+    {
+      "cliente": "Minimarket Gonz├íles",
+      "latitud": -9.11926634,
+      "longitud": -78.50964592
+    },
+    {
+      "cliente": "Quiliche De Alva, Maura",
+      "latitud": -9.1178,
+      "longitud": -78.51122
+    },
+    {
+      "cliente": "Barrenechea Melgarejo, Juana Rosa",
+      "latitud": -9.11805449,
+      "longitud": -78.51104863
+    },
+    {
+      "cliente": "Castillo Lazaro, Ruth Emilia",
+      "latitud": -9.117853,
+      "longitud": -78.510007
+    },
+    {
+      "cliente": "SALCEDO PALACIOS, LESTER",
+      "latitud": -9.116721,
+      "longitud": -78.510107
+    },
+    {
+      "cliente": "Rivas Ponce, Tatiana Yisela",
+      "latitud": -9.1170907,
+      "longitud": -78.5107345
+    },
+    {
+      "cliente": "Cerrate Rojas, Santiago Pilar",
+      "latitud": -9.116495,
+      "longitud": -78.5102
+    },
+    {
+      "cliente": "Anita",
+      "latitud": -9.1149103,
+      "longitud": -78.5087231
+    },
+    {
+      "cliente": "Lara Saenz, Jaime Richard",
+      "latitud": -9.1140568,
+      "longitud": -78.5078935
+    },
+    {
+      "cliente": "Pereda Bernuy, Leslie Chris",
+      "latitud": -9.11853202,
+      "longitud": -78.50912698
+    },
+    {
+      "cliente": "Katy",
+      "latitud": -9.119949,
+      "longitud": -78.509421
+    },
+    {
+      "cliente": "Castillo Cabanillas, Matilde Floren",
+      "latitud": -9.11887,
+      "longitud": -78.50915
+    },
+    {
+      "cliente": "Salas Rivera, Doris",
+      "latitud": -9.120204,
+      "longitud": -78.505988
+    },
+    {
+      "cliente": "Trejo Pumashonco, Ramiro Segundo",
+      "latitud": -9.113934,
+      "longitud": -78.509204
+    },
+    {
+      "cliente": "Lujan Porras, Patricia Nancy",
+      "latitud": -9.1130983,
+      "longitud": -78.5090967
+    },
+    {
+      "cliente": "La Ventanita",
+      "latitud": -9.113672,
+      "longitud": -78.509562
+    },
+    {
+      "cliente": "Escalante Callan, Martha Norma",
+      "latitud": -9.11225,
+      "longitud": -78.508895
+    },
+    {
+      "cliente": "Bodega",
+      "latitud": -9.111687,
+      "longitud": -78.5091391
+    },
+    {
+      "cliente": "Piminchumo Paredes, Rosario Monica",
+      "latitud": -9.11251,
+      "longitud": -78.50984
+    },
+    {
+      "cliente": "Cruzado Cruz, Yrene Maria",
+      "latitud": -9.11327,
+      "longitud": -78.51059
+    },
+    {
+      "cliente": "Icenia",
+      "latitud": -9.113315,
+      "longitud": -78.511243
+    },
+    {
+      "cliente": "Leyva Salazar, Norma Nancy",
+      "latitud": -9.11095,
+      "longitud": -78.517288
+    },
+    {
+      "cliente": "Leyva De Casta├▒eda, Carmen Edita",
+      "latitud": -9.117173,
+      "longitud": -78.515083
+    },
+    {
+      "cliente": "Villar Marin, Elizabeth",
+      "latitud": -9.116801,
+      "longitud": -78.514244
+    },
+    {
+      "cliente": "Murga Espinoza, Maria Valeriana",
+      "latitud": -9.117097,
+      "longitud": -78.514229
+    },
+    {
+      "cliente": "Manrique Angeles, Mar├¡a Del Rocio",
+      "latitud": -9.1174096,
+      "longitud": -78.5145789
+    },
+    {
+      "cliente": "Tavara Ruiz, Edson Jair",
+      "latitud": -9.117331,
+      "longitud": -78.51192
+    },
+    {
+      "cliente": "Risco Huanilo, Julia Esther",
+      "latitud": -9.11701,
+      "longitud": -78.5125
+    },
+    {
+      "cliente": "Lujan Rodriguez, Aracely Gisela",
+      "latitud": -9.118593,
+      "longitud": -78.513037
+    },
+    {
+      "cliente": "Grifo Texaco",
+      "latitud": -9.119211,
+      "longitud": -78.513092
+    },
+    {
+      "cliente": "Fuente De Soda Akemi",
+      "latitud": -9.1172458,
+      "longitud": -78.5156105
+    },
+    {
+      "cliente": "Corporacion Africanito E.I.R.L.",
+      "latitud": -9.114327,
+      "longitud": -78.512375
+    },
+    {
+      "cliente": "POINT 24.7",
+      "latitud": -9.11533731,
+      "longitud": -78.51108284
+    },
+    {
+      "cliente": "Huerta Vilca, Ines Susana",
+      "latitud": -9.115865,
+      "longitud": -78.510375
+    },
+    {
+      "cliente": "Jerry",
+      "latitud": -9.116001,
+      "longitud": -78.509827
+    },
+    {
+      "cliente": "Carlos Iparraguirre, Jovita",
+      "latitud": -9.114965,
+      "longitud": -78.508783
+    },
+    {
+      "cliente": "Heredia Cornelio, Azyadee Yovanny",
+      "latitud": -9.112858,
+      "longitud": -78.50681
+    },
+    {
+      "cliente": "Lopez Zavaleta, Gladys Marilu",
+      "latitud": -9.112287,
+      "longitud": -78.506227
+    },
+    {
+      "cliente": "Castillo Garcia, Severo",
+      "latitud": -9.128403,
+      "longitud": -78.515732
+    },
+    {
+      "cliente": "Serimsa E.I.R.L.",
+      "latitud": -9.134247,
+      "longitud": -78.518939
+    },
+    {
+      "cliente": "Castillo Urbina, Jose Antonio",
+      "latitud": -9.1333633,
+      "longitud": -78.5132367
+    },
+    {
+      "cliente": "Bodega Carranza",
+      "latitud": -9.13115416,
+      "longitud": -78.51584111
+    },
+    {
+      "cliente": "Representaciones El Encuentro E.",
+      "latitud": -9.130557,
+      "longitud": -78.517439
+    },
+    {
+      "cliente": "Vega Cautivo, Aniceto Elias",
+      "latitud": -9.1369088,
+      "longitud": -78.5101879
+    },
+    {
+      "cliente": "Licoreria Don Miguel S.A.C.",
+      "latitud": -9.12675,
+      "longitud": -78.51686
+    },
+    {
+      "cliente": "Leyva Salazar, Norma Nancy",
+      "latitud": -9.11095,
+      "longitud": -78.517288
+    },
+    {
+      "cliente": "Salas Rivera, Doris",
+      "latitud": -9.120204,
+      "longitud": -78.505988
+    }
+  ],
+  "BK4806": [
+    {
+      "cliente": "Bodega Amaia",
+      "latitud": -8.9717768,
+      "longitud": -78.50340127
+    },
+    {
+      "cliente": "Palomino De La Cruz, Giovanna Soled",
+      "latitud": -8.973151,
+      "longitud": -78.49722
+    },
+    {
+      "cliente": "Ramos Andrade, Isabel",
+      "latitud": -8.973392,
+      "longitud": -78.496732
+    },
+    {
+      "cliente": "Luna Lopez, Lady Nataly",
+      "latitud": -8.962962,
+      "longitud": -78.507712
+    },
+    {
+      "cliente": "Guevara Gonzales, Segunda Felicita",
+      "latitud": -8.99699,
+      "longitud": -78.5387
+    },
+    {
+      "cliente": "Carrasco Aranda, Evelyn Susi",
+      "latitud": -8.9981816,
+      "longitud": -78.5407545
+    },
+    {
+      "cliente": "Alejos Mori, Lidia",
+      "latitud": -8.99832,
+      "longitud": -78.5407833
+    },
+    {
+      "cliente": "Reyes Castillo, Anacario Agustin",
+      "latitud": -8.997292,
+      "longitud": -78.554724
+    },
+    {
+      "cliente": "Reyes Cipriani, Alexei Agustin",
+      "latitud": -8.9973099,
+      "longitud": -78.5546831
+    },
+    {
+      "cliente": "Leon Reyes, Roxana Haydee",
+      "latitud": -8.997127,
+      "longitud": -78.554577
+    },
+    {
+      "cliente": "Saavedra Campos, Noelia Giovani",
+      "latitud": -8.9967998,
+      "longitud": -78.5569323
+    },
+    {
+      "cliente": "La Abuelita",
+      "latitud": -8.995343,
+      "longitud": -78.557511
+    },
+    {
+      "cliente": "Tarazona Acu├▒a, Franklin Jhunior",
+      "latitud": -8.994055,
+      "longitud": -78.5572983
+    },
+    {
+      "cliente": "Paredes Ygnacio, Jaquelin",
+      "latitud": -8.996486,
+      "longitud": -78.55747669
+    },
+    {
+      "cliente": "Reyna Gonzales, Franklin",
+      "latitud": -8.9970517,
+      "longitud": -78.556765
+    },
+    {
+      "cliente": "Rubi├▒os Otiniano, Luis Ricardo",
+      "latitud": -8.998418,
+      "longitud": -78.558095
+    },
+    {
+      "cliente": "D├¡az Rodriguez, Jos├® Segundo",
+      "latitud": -8.9984603,
+      "longitud": -78.559025
+    },
+    {
+      "cliente": "Jaque Ramos, Viviana Agustina",
+      "latitud": -8.998523,
+      "longitud": -78.559067
+    },
+    {
+      "cliente": "More Ponte, Nancy Mariluz",
+      "latitud": -8.998325,
+      "longitud": -78.558022
+    },
+    {
+      "cliente": "Paredes Salda├▒a, Edith",
+      "latitud": -8.999404,
+      "longitud": -78.557003
+    },
+    {
+      "cliente": "GONZALES PAREDES, JESSICA",
+      "latitud": -8.999546,
+      "longitud": -78.556893
+    },
+    {
+      "cliente": "Alfredo",
+      "latitud": -8.999895,
+      "longitud": -78.55863
+    },
+    {
+      "cliente": "Alba Bermudez, Julia Eulalia",
+      "latitud": -9.000285,
+      "longitud": -78.557312
+    },
+    {
+      "cliente": "Lucy Y Mery",
+      "latitud": -9.003253,
+      "longitud": -78.5567
+    },
+    {
+      "cliente": "Bobadilla Briceno, Cintia Irene",
+      "latitud": -8.9748229,
+      "longitud": -78.5357325
+    },
+    {
+      "cliente": "Villanueva De La Cruz, Celia Susana",
+      "latitud": -8.974883,
+      "longitud": -78.53631
+    },
+    {
+      "cliente": "V├ísquez Ramos, Almeida Santos",
+      "latitud": -8.908794,
+      "longitud": -78.5257207
+    },
+    {
+      "cliente": "Fanny",
+      "latitud": -9.04899551,
+      "longitud": -78.57828345
+    },
+    {
+      "cliente": "Zavaleta De Hernandez, Toribia Alfo",
+      "latitud": -9.0489,
+      "longitud": -78.5782
+    },
+    {
+      "cliente": "De La Cruz Cano, Edith Janeth",
+      "latitud": -9.04942,
+      "longitud": -78.578743
+    },
+    {
+      "cliente": "Lopez Baca, Marihtza",
+      "latitud": -9.04903,
+      "longitud": -78.57796
+    },
+    {
+      "cliente": "Huanilo Ambrosio, Mhay Ivonne",
+      "latitud": -9.04879938,
+      "longitud": -78.57947689
+    },
+    {
+      "cliente": "Castillon Argomedo, Alicia Soledad",
+      "latitud": -9.04935,
+      "longitud": -78.57977
+    },
+    {
+      "cliente": "Alva Lopez, Felipa Rosa",
+      "latitud": -9.049513,
+      "longitud": -78.5792059
+    },
+    {
+      "cliente": "LOPEZ COTOS, SANTA TORIBIA",
+      "latitud": -9.050268,
+      "longitud": -78.580361
+    },
+    {
+      "cliente": "Cordova Araujo, Carmen Liseth",
+      "latitud": -9.049795,
+      "longitud": -78.578813
+    },
+    {
+      "cliente": "Rosales Ruiz Vda De Cueva, Esperanz",
+      "latitud": -9.04989,
+      "longitud": -78.57863
+    },
+    {
+      "cliente": "Ambrocio Moreno, Roberto Carlos",
+      "latitud": -9.051224,
+      "longitud": -78.579159
+    },
+    {
+      "cliente": "Elias Moreno, Ana Melva",
+      "latitud": -9.051607,
+      "longitud": -78.578343
+    }
+  ],
+  "BK4805": [
+    {
+      "cliente": "Lazaro Mimbela, Susana Mirtha",
+      "latitud": -9.4688967,
+      "longitud": -78.3145933
+    },
+    {
+      "cliente": "Rodriguez Cruz, Carmen Amparo",
+      "latitud": -9.468535,
+      "longitud": -78.3151317
+    },
+    {
+      "cliente": "Chero Roldan, Nina Soledad",
+      "latitud": -9.470125,
+      "longitud": -78.314018
+    },
+    {
+      "cliente": "Ramirez Garay, Tania Jacqueline",
+      "latitud": -9.470339,
+      "longitud": -78.315641
+    },
+    {
+      "cliente": "Horna Leyva, Ofelia Orfilia",
+      "latitud": -9.4700627,
+      "longitud": -78.3158871
+    },
+    {
+      "cliente": "Chero Roldan, Lucy Maribel",
+      "latitud": -9.47016922,
+      "longitud": -78.31597837
+    },
+    {
+      "cliente": "Matta Carbajo, Eliza Flor",
+      "latitud": -9.47081,
+      "longitud": -78.31602
+    },
+    {
+      "cliente": "Angeles Ciriaco, Magda Celestina",
+      "latitud": -9.470325,
+      "longitud": -78.313718
+    },
+    {
+      "cliente": "Roldan Villajuana, Rosa Maria",
+      "latitud": -9.47026,
+      "longitud": -78.313786
+    },
+    {
+      "cliente": "Ruiz Loli, Socorro Violeta",
+      "latitud": -9.470413,
+      "longitud": -78.312538
+    },
+    {
+      "cliente": "Castillo Zamudio, Roxona Elizabeth",
+      "latitud": -9.4704817,
+      "longitud": -78.3115283
+    },
+    {
+      "cliente": "Bodega Meche",
+      "latitud": -9.470496,
+      "longitud": -78.311252
+    },
+    {
+      "cliente": "Gutierrez Burgos, Anita Ysabel",
+      "latitud": -9.470609,
+      "longitud": -78.310882
+    },
+    {
+      "cliente": "Melendez Romero, Valeria Del Pilar",
+      "latitud": -9.472555,
+      "longitud": -78.3085283
+    },
+    {
+      "cliente": "Paredes Rafaile, Ronal Victor",
+      "latitud": -9.4716178,
+      "longitud": -78.31035353
+    },
+    {
+      "cliente": "Garcilazo Rosales, Ingrid Tatiana",
+      "latitud": -9.47094344,
+      "longitud": -78.31219804
+    },
+    {
+      "cliente": "Ramirez Tello, Lili",
+      "latitud": -9.4719108,
+      "longitud": -78.3127325
+    },
+    {
+      "cliente": "Jer├│nimo Huarca, Cristopher Anderso",
+      "latitud": -9.4726437,
+      "longitud": -78.2989024
+    },
+    {
+      "cliente": "Don De Paty",
+      "latitud": -9.47158,
+      "longitud": -78.29565
+    },
+    {
+      "cliente": "Huamanchumo Sanchez Javier Jaime",
+      "latitud": -9.47275847,
+      "longitud": -78.3003447
+    },
+    {
+      "cliente": "Flores Vega, Shayuri Tha├▒ia",
+      "latitud": -9.4713133,
+      "longitud": -78.3011983
+    },
+    {
+      "cliente": "CIPRA OLIVAREZ, JULIA",
+      "latitud": -9.4705359,
+      "longitud": -78.30282253
+    },
+    {
+      "cliente": "Figueroa Alva, Dora Margarita",
+      "latitud": -9.4712783,
+      "longitud": -78.2953167
+    },
+    {
+      "cliente": "Raymundo Juarez, Gonzalo",
+      "latitud": -9.47658644,
+      "longitud": -78.29900914
+    },
+    {
+      "cliente": "Sanchez Sanchez, Jeannet Julisa",
+      "latitud": -9.477478,
+      "longitud": -78.302187
+    },
+    {
+      "cliente": "Geny",
+      "latitud": -9.4762368,
+      "longitud": -78.3017709
+    },
+    {
+      "cliente": "Siche Anhuaman, Patricia Yolanda",
+      "latitud": -9.47531,
+      "longitud": -78.29868
+    },
+    {
+      "cliente": "Leon Broncano, Grimaldo Maximo",
+      "latitud": -9.47487,
+      "longitud": -78.29619
+    },
+    {
+      "cliente": "Gonzales Angeles, Danyer Cesar",
+      "latitud": -9.46891199,
+      "longitud": -78.34216862
+    },
+    {
+      "cliente": "Lazaro Morante, Isabel Rosmery",
+      "latitud": -9.47158862,
+      "longitud": -78.34318989
+    },
+    {
+      "cliente": "Bodega Alexander",
+      "latitud": -9.44911,
+      "longitud": -78.34769
+    },
+    {
+      "cliente": "Villanueva Ramirez, Maria Maribel",
+      "latitud": -9.449515,
+      "longitud": -78.347765
+    },
+    {
+      "cliente": "Cruz Lachira, Maria Teresa",
+      "latitud": -9.462196,
+      "longitud": -78.372829
+    },
+    {
+      "cliente": "Silva Namuche, Shiamara Julissa",
+      "latitud": -9.462186,
+      "longitud": -78.372839
+    },
+    {
+      "cliente": "Lachira Yamunaque, Maria Julia",
+      "latitud": -9.463781,
+      "longitud": -78.37345
+    },
+    {
+      "cliente": "Robles Infantes, Avelina Teodora",
+      "latitud": -9.463468,
+      "longitud": -78.372749
+    },
+    {
+      "cliente": "Lachira De Lopez, Maria Erminia",
+      "latitud": -9.46358,
+      "longitud": -78.373364
+    },
+    {
+      "cliente": "Juarez Bereche, Marcos Naun",
+      "latitud": -9.4620619,
+      "longitud": -78.3727944
+    },
+    {
+      "cliente": "Mathews Mu├▒oz, Gladys Yasmi",
+      "latitud": -9.4622883,
+      "longitud": -78.381548
+    },
+    {
+      "cliente": "Chero Escobedo, Stefany Joan",
+      "latitud": -9.460428,
+      "longitud": -78.384141
+    },
+    {
+      "cliente": "Mimbela Arellano, Maria Magdalena",
+      "latitud": -9.460937,
+      "longitud": -78.382824
+    },
+    {
+      "cliente": "Cevicheria Dmar",
+      "latitud": -9.460959,
+      "longitud": -78.382833
+    },
+    {
+      "cliente": "Jhonatan",
+      "latitud": -9.462072,
+      "longitud": -78.382026
+    },
+    {
+      "cliente": "Sol├¡s Nima De Adanaque, Alizandra M",
+      "latitud": -9.4619218,
+      "longitud": -78.3818376
+    },
+    {
+      "cliente": "Leon Oliveros, Lizvet Fortuna",
+      "latitud": -9.4704292,
+      "longitud": -78.3162761
+    }
+  ],
+  "BK4807": [
+    {
+      "cliente": "NOMBERTO MONTENEGRO,MAYRA PATRICIA",
+      "latitud": -9.109635,
+      "longitud": -78.5124183
+    },
+    {
+      "cliente": "Tavara Zarzosa, Marina Isabel",
+      "latitud": -9.109092,
+      "longitud": -78.512342
+    },
+    {
+      "cliente": "Bodega margori",
+      "latitud": -9.1088682,
+      "longitud": -78.51124727
+    },
+    {
+      "cliente": "Eugendio Alvarado, Luis Alfredo",
+      "latitud": -9.108535,
+      "longitud": -78.511463
+    },
+    {
+      "cliente": "Bodega china",
+      "latitud": -9.1082717,
+      "longitud": -78.5115233
+    },
+    {
+      "cliente": "Lopez Melgarejo, Rosalia",
+      "latitud": -9.108994,
+      "longitud": -78.510452
+    },
+    {
+      "cliente": "Campos Roldan, Maricielo Del Pilar",
+      "latitud": -9.1090027,
+      "longitud": -78.5138193
+    },
+    {
+      "cliente": "Alvarado Avalo, Kary Del Pilar",
+      "latitud": -9.11085,
+      "longitud": -78.51531
+    },
+    {
+      "cliente": "Julian Rosriguez, Ana Isabel",
+      "latitud": -9.11640235,
+      "longitud": -78.51515586
+    },
+    {
+      "cliente": "Capitan Mohali S.A.C.",
+      "latitud": -9.116636,
+      "longitud": -78.515382
+    },
+    {
+      "cliente": "Store 84",
+      "latitud": -9.116775,
+      "longitud": -78.515609
+    },
+    {
+      "cliente": "Coronel Torres, Rosa Marlene",
+      "latitud": -9.1165317,
+      "longitud": -78.5159433
+    },
+    {
+      "cliente": "Magui├▒a Zarsoza Vda De Palomino, Bl",
+      "latitud": -9.11648,
+      "longitud": -78.5159
+    },
+    {
+      "cliente": "Garcia Vera De Vasquez, Maria Merce",
+      "latitud": -9.116022,
+      "longitud": -78.516305
+    },
+    {
+      "cliente": "Lector Saldarriaga, Magda Fermina",
+      "latitud": -9.114419,
+      "longitud": -78.515349
+    },
+    {
+      "cliente": "Dominguez De Villanueva, Hilda",
+      "latitud": -9.11423,
+      "longitud": -78.51611
+    },
+    {
+      "cliente": "Negociaciones Culinarias J & N Food",
+      "latitud": -9.1211,
+      "longitud": -78.53192
+    },
+    {
+      "cliente": "De La Cruz Santos, Rocio Marisol",
+      "latitud": -9.114812,
+      "longitud": -78.51659
+    },
+    {
+      "cliente": "Ricardo",
+      "latitud": -9.114081,
+      "longitud": -78.517345
+    },
+    {
+      "cliente": "Queneche De Zapata, Felipa",
+      "latitud": -9.12519,
+      "longitud": -78.52098
+    },
+    {
+      "cliente": "INNOVA SERVICES PERU E.I.R.L.",
+      "latitud": -9.122351,
+      "longitud": -78.538214
+    },
+    {
+      "cliente": "Castro Montalvo, Lilia",
+      "latitud": -9.113571,
+      "longitud": -78.518033
+    },
+    {
+      "cliente": "Silva Rodriguez, Rober Jems",
+      "latitud": -9.11306,
+      "longitud": -78.51736
+    },
+    {
+      "cliente": "Valle Torres, Epifania",
+      "latitud": -9.110834,
+      "longitud": -78.515154
+    },
+    {
+      "cliente": "Velasquez Marinos, Erika Shirley",
+      "latitud": -9.109232,
+      "longitud": -78.514975
+    },
+    {
+      "cliente": "Bodega Loanita",
+      "latitud": -9.11121,
+      "longitud": -78.51195
+    },
+    {
+      "cliente": "TOCAS MOSQUEIRA, JENIFER",
+      "latitud": -9.1116269,
+      "longitud": -78.5128879
+    },
+    {
+      "cliente": "Purisaca Moncada, Jose Carlos",
+      "latitud": -9.111614,
+      "longitud": -78.512848
+    },
+    {
+      "cliente": "Vasquez Iparraguirre, Nimio",
+      "latitud": -9.112452,
+      "longitud": -78.511403
+    },
+    {
+      "cliente": "Gomez Rojas, Rufina",
+      "latitud": -9.112255,
+      "longitud": -78.512185
+    },
+    {
+      "cliente": "Mesia De Zavaleta, Blanca Aurora",
+      "latitud": -9.11424,
+      "longitud": -78.519221
+    },
+    {
+      "cliente": "Mini yireth",
+      "latitud": -9.1143578,
+      "longitud": -78.5188915
+    },
+    {
+      "cliente": "Las Flores",
+      "latitud": -9.114874,
+      "longitud": -78.519486
+    },
+    {
+      "cliente": "Gianfry",
+      "latitud": -9.11473886,
+      "longitud": -78.51872743
+    },
+    {
+      "cliente": "Adison",
+      "latitud": -9.1120374,
+      "longitud": -78.5126145
+    },
+    {
+      "cliente": "Mauricio Aparicio, Melina Luz",
+      "latitud": -9.11578,
+      "longitud": -78.54272
+    },
+    {
+      "cliente": "Mauricio Flores, Brayan Darwin",
+      "latitud": -9.1157103,
+      "longitud": -78.5426551
+    },
+    {
+      "cliente": "FLORES RAMOS, GLADYS",
+      "latitud": -9.1193344,
+      "longitud": -78.5186816
+    },
+    {
+      "cliente": "Garay Soria, Marcelino",
+      "latitud": -9.117227,
+      "longitud": -78.517832
+    },
+    {
+      "cliente": "Quintana Cadillo, Yrma Mayela",
+      "latitud": -9.112896,
+      "longitud": -78.515703
+    },
+    {
+      "cliente": "Carhuayano Ramirez, Martha Nancy",
+      "latitud": -9.116245,
+      "longitud": -78.518862
+    },
+    {
+      "cliente": "Inversiones Y Representaciones Renv",
+      "latitud": -9.112726,
+      "longitud": -78.516262
+    },
+    {
+      "cliente": "Brian Burgos",
+      "latitud": -9.11564,
+      "longitud": -78.51955
+    },
+    {
+      "cliente": "Rodriguez Sarmiento, Cesar Adderlin",
+      "latitud": -9.11195,
+      "longitud": -78.517638
+    },
+    {
+      "cliente": "Bazan Vallejos, Vilma Erika",
+      "latitud": -9.111595,
+      "longitud": -78.515747
+    },
+    {
+      "cliente": "Lavado Rodriguez, Anastacio Eduardo",
+      "latitud": -9.11094,
+      "longitud": -78.51521
+    },
+    {
+      "cliente": "Zegarra Aguilar, Hermes Renato",
+      "latitud": -9.111555,
+      "longitud": -78.514593
+    },
+    {
+      "cliente": "Miranda Minaya, Erick Delmer",
+      "latitud": -9.112171,
+      "longitud": -78.51568
+    },
+    {
+      "cliente": "Balois Colombino, Virginia Santosa",
+      "latitud": -9.1118949,
+      "longitud": -78.516654
+    },
+    {
+      "cliente": "Sanchez Layza, Rosa Maria",
+      "latitud": -9.11108317,
+      "longitud": -78.5158728
+    },
+    {
+      "cliente": "Guevara Bendezu, Justa Nilda",
+      "latitud": -9.11132,
+      "longitud": -78.51606
+    },
+    {
+      "cliente": "Rojas",
+      "latitud": -9.11101,
+      "longitud": -78.51443
+    },
+    {
+      "cliente": "Llantoy Viera, Carmen Rosa",
+      "latitud": -9.110922,
+      "longitud": -78.514037
+    },
+    {
+      "cliente": "Bazan Narvaez, Marianela",
+      "latitud": -9.110783,
+      "longitud": -78.513568
+    },
+    {
+      "cliente": "Florentino Navarro De Cueva, Sonia",
+      "latitud": -9.10953,
+      "longitud": -78.51382
+    },
+    {
+      "cliente": "Cevero Vega, Ysely Yleyne",
+      "latitud": -9.108509,
+      "longitud": -78.5145586
+    },
+    {
+      "cliente": "Palomino Infantes, Estefani Tatiana",
+      "latitud": -9.108926,
+      "longitud": -78.51403
+    }
+  ],
+  "BK4808": [
+    {
+      "cliente": "Encomendera Amelia",
+      "latitud": -9.123303,
+      "longitud": -78.507904
+    },
+    {
+      "cliente": "Iba├▒ez Monta├▒ez, Gladis Reyna",
+      "latitud": -9.12244,
+      "longitud": -78.50764
+    },
+    {
+      "cliente": "Alessandra araceli, Avalos Arenas",
+      "latitud": -9.1206067,
+      "longitud": -78.5054167
+    },
+    {
+      "cliente": "Principe Vasquez, Elisa Angela",
+      "latitud": -9.120545,
+      "longitud": -78.505412
+    },
+    {
+      "cliente": "Monkey Negocios S.A.C.",
+      "latitud": -9.118971,
+      "longitud": -78.508096
+    },
+    {
+      "cliente": "Leo",
+      "latitud": -9.12133,
+      "longitud": -78.506407
+    },
+    {
+      "cliente": "Coleman Cortez, Ermis Ruth",
+      "latitud": -9.120754,
+      "longitud": -78.507367
+    },
+    {
+      "cliente": "Chavez Pozu, Fortunato Esteban",
+      "latitud": -9.12092,
+      "longitud": -78.50798
+    },
+    {
+      "cliente": "Bodega lidia",
+      "latitud": -9.13103186,
+      "longitud": -78.49639007
+    },
+    {
+      "cliente": "Antaurco Rivera, Santa Clara",
+      "latitud": -9.12067,
+      "longitud": -78.5082
+    },
+    {
+      "cliente": "Mendoza Ocana, Lucila",
+      "latitud": -9.133972,
+      "longitud": -78.490959
+    },
+    {
+      "cliente": "Quezada Baluiz, Moises Arturo",
+      "latitud": -9.120492,
+      "longitud": -78.508247
+    },
+    {
+      "cliente": "Pastor Barrera, Maria Regina",
+      "latitud": -9.11693,
+      "longitud": -78.50898
+    },
+    {
+      "cliente": "Pirgo Alva, Zulema",
+      "latitud": -9.119355,
+      "longitud": -78.507028
+    },
+    {
+      "cliente": "Altuna Carranza, Rosa Esmeralda",
+      "latitud": -9.11774,
+      "longitud": -78.50913
+    },
+    {
+      "cliente": "Montoro Ramirez, Yocelin",
+      "latitud": -9.1160337,
+      "longitud": -78.5041684
+    },
+    {
+      "cliente": "CEPEDA CRUZ, SIGIFREDO",
+      "latitud": -9.1156359,
+      "longitud": -78.5052087
+    },
+    {
+      "cliente": "Azana Dominguez, Julio Arnulfo",
+      "latitud": -9.11794,
+      "longitud": -78.508057
+    },
+    {
+      "cliente": "SIFUENTES PERAMAS, HAROL",
+      "latitud": -9.11673611,
+      "longitud": -78.50437961
+    },
+    {
+      "cliente": "REYES MU├æOZ, JUNIOR",
+      "latitud": -9.11651,
+      "longitud": -78.50824
+    },
+    {
+      "cliente": "Chegne Pino, Ivonne Kei",
+      "latitud": -9.1175967,
+      "longitud": -78.5048689
+    },
+    {
+      "cliente": "Acosta Salvador, Carol Beatriz",
+      "latitud": -9.11813,
+      "longitud": -78.50521
+    },
+    {
+      "cliente": "Zavaleta Graciano, Alejandrina",
+      "latitud": -9.114954,
+      "longitud": -78.508219
+    },
+    {
+      "cliente": "Esquivel Torres, Karla Viviana",
+      "latitud": -9.119117,
+      "longitud": -78.503935
+    },
+    {
+      "cliente": "Serrano Savas, Dana",
+      "latitud": -9.11478747,
+      "longitud": -78.50752172
+    },
+    {
+      "cliente": "Rodriguez Salinas, Dina Elizabeth",
+      "latitud": -9.119607,
+      "longitud": -78.504868
+    },
+    {
+      "cliente": "CASTILLO TORRES, VALERIA",
+      "latitud": -9.119328,
+      "longitud": -78.506971
+    },
+    {
+      "cliente": "Pereira Villanueva, Elva A",
+      "latitud": -9.113695,
+      "longitud": -78.505243
+    },
+    {
+      "cliente": "Quezada Acu├▒a, Maria Elena",
+      "latitud": -9.1148781,
+      "longitud": -78.5061985
+    },
+    {
+      "cliente": "Sanchez Lucho, Eucebio Teofilo",
+      "latitud": -9.1214171,
+      "longitud": -78.500822
+    },
+    {
+      "cliente": "Miranda Sanchez, Eusebio Pascual",
+      "latitud": -9.11576,
+      "longitud": -78.5072
+    },
+    {
+      "cliente": "MULTISERVICIOS",
+      "latitud": -9.12181494,
+      "longitud": -78.49992015
+    },
+    {
+      "cliente": "Maria Esther",
+      "latitud": -9.11485,
+      "longitud": -78.50747
+    },
+    {
+      "cliente": "TABACOCLUB",
+      "latitud": -9.11515,
+      "longitud": -78.50787
+    },
+    {
+      "cliente": "Ponte Dominguez, Francisco Raul",
+      "latitud": -9.115745,
+      "longitud": -78.508428
+    },
+    {
+      "cliente": "BODEGA LA ECONOMICA",
+      "latitud": -9.11937439,
+      "longitud": -78.49873968
+    },
+    {
+      "cliente": "Chero Cobe├▒as, Maria Amelia",
+      "latitud": -9.120248,
+      "longitud": -78.496528
+    },
+    {
+      "cliente": "Romero Velasquez, Hilda",
+      "latitud": -9.116788,
+      "longitud": -78.504148
+    },
+    {
+      "cliente": "Bodega Do├▒a Lucy",
+      "latitud": -9.122031,
+      "longitud": -78.497934
+    },
+    {
+      "cliente": "Ganez",
+      "latitud": -9.1158429,
+      "longitud": -78.5019763
+    },
+    {
+      "cliente": "VILLACHICA VILLANUEVA,",
+      "latitud": -9.122724,
+      "longitud": -78.497188
+    },
+    {
+      "cliente": "Sin nombre",
+      "latitud": -9.1169286,
+      "longitud": -78.5020545
+    },
+    {
+      "cliente": "Hernandez Hernandez, Lucia",
+      "latitud": -9.1226131,
+      "longitud": -78.4973718
+    },
+    {
+      "cliente": "Roncal Brice├▒o, Santos Alberto",
+      "latitud": -9.117198,
+      "longitud": -78.503686
+    },
+    {
+      "cliente": "Herrera Llacsahuanga, Erotilde",
+      "latitud": -9.122409,
+      "longitud": -78.497761
+    },
+    {
+      "cliente": "Acevedo Rodriguez, Monica Rocio",
+      "latitud": -9.122678,
+      "longitud": -78.498571
+    },
+    {
+      "cliente": "ESPEJO JARA, JOSE",
+      "latitud": -9.123494,
+      "longitud": -78.498847
+    },
+    {
+      "cliente": "Bodega Mainmar",
+      "latitud": -9.116297,
+      "longitud": -78.509413
+    },
+    {
+      "cliente": "Aguirre Pino, Maria Teresa",
+      "latitud": -9.1236663,
+      "longitud": -78.4994173
+    },
+    {
+      "cliente": "Fernandez Vargas, Ercila",
+      "latitud": -9.124796,
+      "longitud": -78.499423
+    },
+    {
+      "cliente": "Cuellar San Miguel, Elena Clorinda",
+      "latitud": -9.1243896,
+      "longitud": -78.4998377
+    },
+    {
+      "cliente": "Levano Giron, Marco Elias",
+      "latitud": -9.123798,
+      "longitud": -78.497539
+    },
+    {
+      "cliente": "Ayasta Fiestas, Eliana Jajaira",
+      "latitud": -9.12510086,
+      "longitud": -78.49638508
+    },
+    {
+      "cliente": "Pereda Bacilio, Zoilita Del Rosario",
+      "latitud": -9.126553,
+      "longitud": -78.490409
+    },
+    {
+      "cliente": "Pereda",
+      "latitud": -9.127926,
+      "longitud": -78.487415
+    }
+  ],
+  "BK4802": [
+    {
+      "cliente": "Lopez Garcilazo De Quiroz, Benedict",
+      "latitud": -9.05103,
+      "longitud": -78.58935
+    },
+    {
+      "cliente": "Chomba Chang, Rosa Elvira",
+      "latitud": -9.0501035,
+      "longitud": -78.5891898
+    },
+    {
+      "cliente": "GERARDO",
+      "latitud": -9.0507357,
+      "longitud": -78.5899039
+    },
+    {
+      "cliente": "Huallanca Mi├▒ano, Anita Jone",
+      "latitud": -9.05075,
+      "longitud": -78.58975
+    },
+    {
+      "cliente": "Castillo Padilla, Maria Isabel",
+      "latitud": -9.05194,
+      "longitud": -78.5889
+    },
+    {
+      "cliente": "Gamez Julca, Nancy Gamez Julca",
+      "latitud": -9.05225,
+      "longitud": -78.5883383
+    },
+    {
+      "cliente": "Tirado Gamez, Gloria",
+      "latitud": -9.0513572,
+      "longitud": -78.5868813
+    },
+    {
+      "cliente": "Coico De Castillo, Anita",
+      "latitud": -9.05103,
+      "longitud": -78.58568
+    },
+    {
+      "cliente": "Rivadeneira Coico, Midua Maribel",
+      "latitud": -9.051157,
+      "longitud": -78.585528
+    },
+    {
+      "cliente": "Angaspilco Plasencia, Bitia Angelic",
+      "latitud": -9.05165,
+      "longitud": -78.585871
+    },
+    {
+      "cliente": "Aquino Gonzales, Cesar Jaime",
+      "latitud": -9.051162,
+      "longitud": -78.586428
+    },
+    {
+      "cliente": "Acosta Bances, Encarnacion",
+      "latitud": -9.052251,
+      "longitud": -78.586804
+    },
+    {
+      "cliente": "Layza Valverde, Teudulio",
+      "latitud": -9.0685891,
+      "longitud": -78.5865967
+    },
+    {
+      "cliente": "Lujan Taboada, Liz Liliana",
+      "latitud": -9.05305,
+      "longitud": -78.58683
+    },
+    {
+      "cliente": "Ju├írez Garc├¡a, Jos├® Alberto",
+      "latitud": -9.05277961,
+      "longitud": -78.58938483
+    },
+    {
+      "cliente": "Cesar Paredes",
+      "latitud": -9.05293025,
+      "longitud": -78.58915738
+    },
+    {
+      "cliente": "Aguilar Espinoza, Sonia Nancy",
+      "latitud": -9.053149,
+      "longitud": -78.588583
+    },
+    {
+      "cliente": "Ayasta Alvarez, Luis Alberto",
+      "latitud": -9.054372,
+      "longitud": -78.587885
+    },
+    {
+      "cliente": "FLORES OBESO, MIGUEL",
+      "latitud": -9.054669,
+      "longitud": -78.587631
+    },
+    {
+      "cliente": "Bulnes Salinas, Gladys Yaneth",
+      "latitud": -9.054264,
+      "longitud": -78.588096
+    },
+    {
+      "cliente": "Lazaro Balligo, Dionicia Maria",
+      "latitud": -9.05317,
+      "longitud": -78.58885
+    },
+    {
+      "cliente": "Bonifacio De La Cruz, Herlinda Redi",
+      "latitud": -9.052528,
+      "longitud": -78.589522
+    },
+    {
+      "cliente": "Inversiones Y Servicios Generale",
+      "latitud": -9.053172,
+      "longitud": -78.587878
+    },
+    {
+      "cliente": "Valeria Jarumi, Medina Chiroque",
+      "latitud": -9.053759,
+      "longitud": -78.587488
+    },
+    {
+      "cliente": "Calizaya Pastor, Rosa Elvira",
+      "latitud": -9.05399681,
+      "longitud": -78.58656774
+    },
+    {
+      "cliente": "De La Cruz Flores, Benedicta Corina",
+      "latitud": -9.05383,
+      "longitud": -78.58764
+    },
+    {
+      "cliente": "Arroyo Samames, Rosa Isabel",
+      "latitud": -9.05407,
+      "longitud": -78.58743
+    },
+    {
+      "cliente": "Chavez Silva, Flor",
+      "latitud": -9.054842,
+      "longitud": -78.587029
+    },
+    {
+      "cliente": "Castillo Chero, Gladys Veronica",
+      "latitud": -9.0557617,
+      "longitud": -78.585185
+    },
+    {
+      "cliente": "Baca Mau, Noyra Yanira",
+      "latitud": -9.056695,
+      "longitud": -78.585603
+    },
+    {
+      "cliente": "Flores Ibarra, Ana Maria",
+      "latitud": -9.05616,
+      "longitud": -78.58532
+    },
+    {
+      "cliente": "Cabrera Reyes, Angelica Consuelo",
+      "latitud": -9.05668,
+      "longitud": -78.5847983
+    },
+    {
+      "cliente": "Alvarado Collantes, Maria Soledad",
+      "latitud": -9.06704,
+      "longitud": -78.58788
+    },
+    {
+      "cliente": "Salinas De Jaramillo, Amanda C",
+      "latitud": -9.05884,
+      "longitud": -78.58849
+    },
+    {
+      "cliente": "Principe Gutierrez, Angela Esther",
+      "latitud": -9.0589306,
+      "longitud": -78.5885733
+    },
+    {
+      "cliente": "Rodriguez Lopez, Silvia Margot",
+      "latitud": -9.060013,
+      "longitud": -78.58822
+    },
+    {
+      "cliente": "Rosario Vel├ízquez Morales",
+      "latitud": -9.061024,
+      "longitud": -78.587062
+    },
+    {
+      "cliente": "Miranda Cuadrao De Guibovich, Nelid",
+      "latitud": -9.05958,
+      "longitud": -78.587947
+    },
+    {
+      "cliente": "Caballero Puelles, Edith R",
+      "latitud": -9.058775,
+      "longitud": -78.587875
+    },
+    {
+      "cliente": "Hernandez Jaramillo, Cecilia Nelly",
+      "latitud": -9.05839,
+      "longitud": -78.58854
+    },
+    {
+      "cliente": "CUSTODIO ARROYO, SAYURI",
+      "latitud": -9.0582141,
+      "longitud": -78.5882163
+    },
+    {
+      "cliente": "Rojas Rivera, Marianella Paola",
+      "latitud": -9.0558557,
+      "longitud": -78.58643144
+    },
+    {
+      "cliente": "Malatay Carretero, Edwar James",
+      "latitud": -9.0570212,
+      "longitud": -78.5862165
+    },
+    {
+      "cliente": "Bodega Dos De Junio",
+      "latitud": -9.058363,
+      "longitud": -78.5862
+    },
+    {
+      "cliente": "Mari├▒os Reyes, Margarita",
+      "latitud": -9.05868,
+      "longitud": -78.5867
+    },
+    {
+      "cliente": "Lizarraga Paredes, Jorge Reynaldo",
+      "latitud": -9.059547,
+      "longitud": -78.586563
+    },
+    {
+      "cliente": "Valdivia De Falen, Manuela",
+      "latitud": -9.05974,
+      "longitud": -78.58646
+    },
+    {
+      "cliente": "Graos Ponte, Rosa Estela",
+      "latitud": -9.05967,
+      "longitud": -78.58699
+    },
+    {
+      "cliente": "Narvaez De Chavez, Maria Luisa",
+      "latitud": -9.06102,
+      "longitud": -78.58661
+    },
+    {
+      "cliente": "Elbita",
+      "latitud": -9.060986,
+      "longitud": -78.586505
+    },
+    {
+      "cliente": "Castro Malo, Renzo",
+      "latitud": -9.0634539,
+      "longitud": -78.5857702
+    },
+    {
+      "cliente": "Valle Rios De Pacheco, Margarita",
+      "latitud": -9.06366,
+      "longitud": -78.58681
+    },
+    {
+      "cliente": "Lopez Castillo, Dalila Noemi",
+      "latitud": -9.06286,
+      "longitud": -78.58569
+    },
+    {
+      "cliente": "Mestanza Moreno, Rosa Rosalvina",
+      "latitud": -9.0624168,
+      "longitud": -78.5852362
+    },
+    {
+      "cliente": "RUBIO VASQUEZ, ESTEFANI",
+      "latitud": -9.06157711,
+      "longitud": -78.58477583
+    },
+    {
+      "cliente": "Sarmiento Quintos, Milagros Lisbeth",
+      "latitud": -9.06341056,
+      "longitud": -78.58488039
+    },
+    {
+      "cliente": "L├│pez Chauca, Irma Silvia",
+      "latitud": -9.0627935,
+      "longitud": -78.5848088
+    },
+    {
+      "cliente": "Bances Chonate, Roxana Del Pilar",
+      "latitud": -9.06258,
+      "longitud": -78.58478
+    },
+    {
+      "cliente": "Chimbote",
+      "latitud": -9.06346156,
+      "longitud": -78.58449835
+    },
+    {
+      "cliente": "Morillo Lucio, Iris Lucy",
+      "latitud": -9.063577,
+      "longitud": -78.58427
+    },
+    {
+      "cliente": "Pulido Albino, Edith Rocio",
+      "latitud": -9.063601,
+      "longitud": -78.584151
+    },
+    {
+      "cliente": "Bodega Lariza",
+      "latitud": -9.0628691,
+      "longitud": -78.5845903
+    },
+    {
+      "cliente": "Ramos Gonzales, Liz Johana",
+      "latitud": -9.06343,
+      "longitud": -78.5793
+    },
+    {
+      "cliente": "Inversiones Malvic E.I.R.L.",
+      "latitud": -9.0706488,
+      "longitud": -78.5788479
+    }
+  ],
+  "BK4803": [
+    {
+      "cliente": "Lopez Rodriguez, Lucero Rosmary",
+      "latitud": -9.071156,
+      "longitud": -78.564634
+    },
+    {
+      "cliente": "Distribuidora Fransule E.I.R.L.",
+      "latitud": -9.0552405,
+      "longitud": -78.5759255
+    },
+    {
+      "cliente": "Luis Alcantara, Dadigna Nelida",
+      "latitud": -9.05433,
+      "longitud": -78.58226
+    },
+    {
+      "cliente": "Ramirez Estrada, Julia",
+      "latitud": -9.05502,
+      "longitud": -78.58104
+    },
+    {
+      "cliente": "Rodriguez Mendoza De Campos, Isabel",
+      "latitud": -9.053993,
+      "longitud": -78.583089
+    },
+    {
+      "cliente": "Asuncion Vilchez, Karina Janett",
+      "latitud": -9.058632,
+      "longitud": -78.58506
+    },
+    {
+      "cliente": "Alcantara Malca, Manuel Eliseo",
+      "latitud": -9.059285,
+      "longitud": -78.586816
+    },
+    {
+      "cliente": "D violeta parrillas",
+      "latitud": -9.05884,
+      "longitud": -78.58825
+    },
+    {
+      "cliente": "DJhon",
+      "latitud": -9.07023791,
+      "longitud": -78.58737222
+    },
+    {
+      "cliente": "Cerna De La Cruz, Yolanda Carmen",
+      "latitud": -9.071245,
+      "longitud": -78.58793
+    },
+    {
+      "cliente": "Asmat Mendoza, Wilmer Leo",
+      "latitud": -9.06492,
+      "longitud": -78.585475
+    },
+    {
+      "cliente": "Lopez Huaman, Juan Manuel",
+      "latitud": -9.087173,
+      "longitud": -78.576822
+    },
+    {
+      "cliente": "Velasquez Paredes, Angelica Flor",
+      "latitud": -9.085592,
+      "longitud": -78.579329
+    },
+    {
+      "cliente": "Distribuidora Fransule E.I.R.L.",
+      "latitud": -9.0552405,
+      "longitud": -78.5759255
+    }
+  ],
+  "BK4814": [
+    {
+      "cliente": "Lopez Horna, Jean Pool Edinson",
+      "latitud": -9.076988,
+      "longitud": -78.5727435
+    },
+    {
+      "cliente": "Lyonell",
+      "latitud": -8.9995176,
+      "longitud": -78.5554227
+    },
+    {
+      "cliente": "Vasquez Lopez, Terencia Ines",
+      "latitud": -9.05405,
+      "longitud": -78.58109
+    },
+    {
+      "cliente": "Revilla Mesinas, Iris Tatiana",
+      "latitud": -9.054765,
+      "longitud": -78.582414
+    },
+    {
+      "cliente": "Perez Vasquez, Maria Angelita",
+      "latitud": -9.055827,
+      "longitud": -78.581539
+    },
+    {
+      "cliente": "Paredes Guzman, Le├│nidas Baltasar",
+      "latitud": -9.0554488,
+      "longitud": -78.5815257
+    },
+    {
+      "cliente": "Vasquez Amancio, Sofia Esmelda",
+      "latitud": -9.0551184,
+      "longitud": -78.5807669
+    },
+    {
+      "cliente": "GOMEZ SALDANA, GABRIELA MARLENY",
+      "latitud": -9.055887,
+      "longitud": -78.5799478
+    },
+    {
+      "cliente": "Cordova Cotrina, Flor Esther",
+      "latitud": -9.055557,
+      "longitud": -78.579918
+    },
+    {
+      "cliente": "Lizarraga Tolentino, Luz Roxana",
+      "latitud": -9.05570157,
+      "longitud": -78.57997607
+    },
+    {
+      "cliente": "Bodega Charito",
+      "latitud": -9.05258005,
+      "longitud": -78.57934364
+    },
+    {
+      "cliente": "Rojas Tapia, Leslit Fiorela",
+      "latitud": -9.052992,
+      "longitud": -78.580262
+    },
+    {
+      "cliente": "Ragas Urbano, Paula Beatriz",
+      "latitud": -9.05295,
+      "longitud": -78.58118
+    },
+    {
+      "cliente": "Lopez Cotos, Elizabeth Catalina",
+      "latitud": -9.05154,
+      "longitud": -78.58071
+    },
+    {
+      "cliente": "Alva Bernuy, Sayuri Evelina",
+      "latitud": -9.05167,
+      "longitud": -78.58058
+    },
+    {
+      "cliente": "LI├æAN RUPAY, RAUL",
+      "latitud": -9.05177,
+      "longitud": -78.58124
+    },
+    {
+      "cliente": "Horna Pesantes, Maria Isabel",
+      "latitud": -9.052151,
+      "longitud": -78.580797
+    }
+  ],
+  "BK4816": [
+    {
+      "cliente": "Plaza Vea - Nuevo Chimbote",
+      "latitud": -9.126352,
+      "longitud": -78.535168
+    },
+    {
+      "cliente": "MENDEZ CASTANEDA,",
+      "latitud": -9.235248,
+      "longitud": -78.448782
+    },
+    {
+      "cliente": "Vasquez Oruna, Ermelinda Marleny",
+      "latitud": -9.235923,
+      "longitud": -78.448695
+    },
+    {
+      "cliente": "BODEGA FERNANDITA",
+      "latitud": -9.25751752,
+      "longitud": -78.43451686
+    },
+    {
+      "cliente": "Ulloa Laveriano, Diana Carolina",
+      "latitud": -9.25858,
+      "longitud": -78.43578
+    },
+    {
+      "cliente": "Vasquez De Montalvo, Neli Deiza",
+      "latitud": -9.257896,
+      "longitud": -78.43501
+    },
+    {
+      "cliente": "Baca Vivar, Aurelia Marleny",
+      "latitud": -9.258181,
+      "longitud": -78.435318
+    },
+    {
+      "cliente": "Sanchez Huaman, Carlos Alberto",
+      "latitud": -9.259415,
+      "longitud": -78.435768
+    },
+    {
+      "cliente": "Alegre Baca, Gladys Lisbeth",
+      "latitud": -9.259873,
+      "longitud": -78.436513
+    },
+    {
+      "cliente": "Vidal Saenz, Moises Enrique",
+      "latitud": -9.261365,
+      "longitud": -78.437535
+    },
+    {
+      "cliente": "Huaman Ch├ívez, Enma Flor",
+      "latitud": -9.25940737,
+      "longitud": -78.43784752
+    },
+    {
+      "cliente": "Geraldine",
+      "latitud": -9.25960966,
+      "longitud": -78.43740107
+    },
+    {
+      "cliente": "Villarreal Osorio, Dany Daniel",
+      "latitud": -9.260281,
+      "longitud": -78.43683
+    },
+    {
+      "cliente": "Caballero De Gonzales, Maria Luisa",
+      "latitud": -9.25975,
+      "longitud": -78.43618
+    },
+    {
+      "cliente": "Montalvo Diestra, Zenaida Tabita",
+      "latitud": -9.257858,
+      "longitud": -78.433818
+    },
+    {
+      "cliente": "Arteaga De Morales, Rosa Elvira",
+      "latitud": -9.26504,
+      "longitud": -78.4254
+    },
+    {
+      "cliente": "Burgos Perez, Dilia Moraida",
+      "latitud": -9.2652328,
+      "longitud": -78.424809
+    },
+    {
+      "cliente": "Flores Escalante, Sonia Lusmila",
+      "latitud": -9.263775,
+      "longitud": -78.42474
+    },
+    {
+      "cliente": "Margarito Lopez, Susy Yovana",
+      "latitud": -9.264978,
+      "longitud": -78.424405
+    },
+    {
+      "cliente": "Aguilar Ochoa, Marisela Nerida",
+      "latitud": -9.265577,
+      "longitud": -78.424867
+    },
+    {
+      "cliente": "Leyva Vega, Macaria Rufina",
+      "latitud": -9.265676,
+      "longitud": -78.424534
+    },
+    {
+      "cliente": "ADRIJUAN",
+      "latitud": -9.2658,
+      "longitud": -78.42469
+    },
+    {
+      "cliente": "Mis tres amores",
+      "latitud": -9.26593072,
+      "longitud": -78.42492703
+    },
+    {
+      "cliente": "Inversiones Dos Delfines S.R.L.",
+      "latitud": -9.12305,
+      "longitud": -78.536213
+    },
+    {
+      "cliente": "Bodega Andreita",
+      "latitud": -9.11846775,
+      "longitud": -78.49941062
+    },
+    {
+      "cliente": "Pinedo Ruiz, Nilma Yulisa",
+      "latitud": -9.1179964,
+      "longitud": -78.498202
+    },
+    {
+      "cliente": "Alvarez Natividad, Rosa Lidia",
+      "latitud": -9.1180861,
+      "longitud": -78.4977705
+    },
+    {
+      "cliente": "Velasquez Rivera, Noemi Natalia",
+      "latitud": -9.1190021,
+      "longitud": -78.4978706
+    },
+    {
+      "cliente": "Bodega Daynita",
+      "latitud": -9.118643,
+      "longitud": -78.497586
+    },
+    {
+      "cliente": "De La Cruz De La Cruz, Teodoro",
+      "latitud": -9.1161017,
+      "longitud": -78.4971593
+    },
+    {
+      "cliente": "Benigno Quezada, Anivel",
+      "latitud": -9.11622,
+      "longitud": -78.49716599999999
+    },
+    {
+      "cliente": "Cerrinos Ponce Peter Junior",
+      "latitud": -9.116649,
+      "longitud": -78.496883
+    },
+    {
+      "cliente": "Paulinos",
+      "latitud": -9.116749,
+      "longitud": -78.497384
+    },
+    {
+      "cliente": "Soto Juarez, Darly Melisa",
+      "latitud": -9.117325,
+      "longitud": -78.496367
+    },
+    {
+      "cliente": "QUILICHE CASTRO, MONICA VANESSA",
+      "latitud": -9.116835,
+      "longitud": -78.495484
+    },
+    {
+      "cliente": "Rodriguez Dominguez, Blanca Ayde",
+      "latitud": -9.1165429,
+      "longitud": -78.4944492
+    },
+    {
+      "cliente": "ARANDA TANTALEAN, BLANCA",
+      "latitud": -9.11596247,
+      "longitud": -78.49344852
+    },
+    {
+      "cliente": "Martinez Contreras, Deivy Jhony",
+      "latitud": -9.115387,
+      "longitud": -78.4943603
+    },
+    {
+      "cliente": "Bodega Julia",
+      "latitud": -9.114729,
+      "longitud": -78.495092
+    },
+    {
+      "cliente": "Cerveza ABSM",
+      "latitud": -9.1168496,
+      "longitud": -78.4930671
+    },
+    {
+      "cliente": "Viera Medina, Rosario",
+      "latitud": -9.11825,
+      "longitud": -78.49
+    },
+    {
+      "cliente": "Bodega Minano",
+      "latitud": -9.114615,
+      "longitud": -78.495084
+    },
+    {
+      "cliente": "Cribillero Villanueva, Coraima Naye",
+      "latitud": -9.11437,
+      "longitud": -78.493131
+    },
+    {
+      "cliente": "Soles Mendoza, Ines Damira",
+      "latitud": -9.1140583,
+      "longitud": -78.49315
+    },
+    {
+      "cliente": "Honorio Rosas, Erika",
+      "latitud": -9.1132369,
+      "longitud": -78.4941747
+    },
+    {
+      "cliente": "TORRES DIESTRA, ODALI ROSMERI",
+      "latitud": -9.113939,
+      "longitud": -78.49471
+    },
+    {
+      "cliente": "Minano Horna, Mabela Micaela",
+      "latitud": -9.113532,
+      "longitud": -78.494698
+    },
+    {
+      "cliente": "Barboza Julca, Dora Lizet",
+      "latitud": -9.11346,
+      "longitud": -78.49476
+    },
+    {
+      "cliente": "Aquino Maita De Aguirre Victoria Re",
+      "latitud": -9.117687,
+      "longitud": -78.502667
+    }
+  ],
+  "BK4813": [
+    {
+      "cliente": "Fastrol Shop E.I.R.L.",
+      "latitud": -9.05158952,
+      "longitud": -78.59316998
+    },
+    {
+      "cliente": "Dimexsa Vivero",
+      "latitud": -9.0495,
+      "longitud": -78.594097
+    },
+    {
+      "cliente": "Monteza Leon, Yesenia Magali",
+      "latitud": -9.047959,
+      "longitud": -78.594336
+    },
+    {
+      "cliente": "Moran Guevara, Silvia Edith",
+      "latitud": -9.049434,
+      "longitud": -78.593331
+    },
+    {
+      "cliente": "Pantaleon Martinez, Maria",
+      "latitud": -9.049459,
+      "longitud": -78.593066
+    },
+    {
+      "cliente": "Cardenas Acosta, Dora Luz",
+      "latitud": -9.049535,
+      "longitud": -78.591594
+    },
+    {
+      "cliente": "Mezarina Alayo, Susan Mirtha",
+      "latitud": -9.048352,
+      "longitud": -78.592317
+    },
+    {
+      "cliente": "Iba├▒ez De La Cruz, Marilu Isabel",
+      "latitud": -9.0485417,
+      "longitud": -78.5929142
+    },
+    {
+      "cliente": "Diestra Ruiz, Yuly Eugenia",
+      "latitud": -9.048346,
+      "longitud": -78.592967
+    },
+    {
+      "cliente": "Lopez Robles, Manuel",
+      "latitud": -9.048926,
+      "longitud": -78.59262499
+    },
+    {
+      "cliente": "Bentin Banon, Norman Erick",
+      "latitud": -9.05503,
+      "longitud": -78.58996
+    },
+    {
+      "cliente": "Coral De Reyes, Estrella Maria",
+      "latitud": -9.05583,
+      "longitud": -78.59007
+    },
+    {
+      "cliente": "Martinez Cano, Nazaria",
+      "latitud": -9.055448,
+      "longitud": -78.589348
+    },
+    {
+      "cliente": "Cortez Chinchay, Roger Avelino",
+      "latitud": -9.05666,
+      "longitud": -78.58938
+    },
+    {
+      "cliente": "Distribuidora Castro",
+      "latitud": -9.05812,
+      "longitud": -78.589
+    },
+    {
+      "cliente": "Desposorio Sanchez De Corales, Flo",
+      "latitud": -9.058763,
+      "longitud": -78.589202
+    },
+    {
+      "cliente": "Inversiones Risalv S.A.C.",
+      "latitud": -9.0658584,
+      "longitud": -78.5875212
+    },
+    {
+      "cliente": "Araujo Geldrez, Lili Janet",
+      "latitud": -9.06361,
+      "longitud": -78.58804
+    },
+    {
+      "cliente": "Jimenez Jauregui, Yadira Julia",
+      "latitud": -9.062705,
+      "longitud": -78.586522
+    },
+    {
+      "cliente": "Alegre De Jimenez, Julia",
+      "latitud": -9.06016,
+      "longitud": -78.58936
+    },
+    {
+      "cliente": "Campos Ramos, Heddy Rocio",
+      "latitud": -9.0599291,
+      "longitud": -78.5893521
+    },
+    {
+      "cliente": "Collantes Moreno, Lucy Rosario",
+      "latitud": -9.059156,
+      "longitud": -78.589559
+    },
+    {
+      "cliente": "Gonzales Quiroz, Maria Teresa",
+      "latitud": -9.055308,
+      "longitud": -78.590912
+    },
+    {
+      "cliente": "Reyes Fernandez, Lorenza",
+      "latitud": -9.0291102,
+      "longitud": -78.6158515
+    },
+    {
+      "cliente": "Loli Bermudez, Yessenia Danilu",
+      "latitud": -9.026909,
+      "longitud": -78.616076
+    },
+    {
+      "cliente": "Rodriguez Terrones De Moreno, Maria",
+      "latitud": -9.0241,
+      "longitud": -78.61517
+    },
+    {
+      "cliente": "Mantilla Contreras, Isabel Ines",
+      "latitud": -9.024456,
+      "longitud": -78.615066
+    },
+    {
+      "cliente": "Moreno Rodriguez, Armando Carlos",
+      "latitud": -9.0244977,
+      "longitud": -78.61515468
+    },
+    {
+      "cliente": "Encomenderia Rosita",
+      "latitud": -9.023729,
+      "longitud": -78.614457
+    },
+    {
+      "cliente": "Campos Pinedo, Miguel",
+      "latitud": -9.023536,
+      "longitud": -78.614563
+    },
+    {
+      "cliente": "Luchita",
+      "latitud": -9.0216313,
+      "longitud": -78.6144873
+    },
+    {
+      "cliente": "Cordova Vda De Colchado, Lidubina",
+      "latitud": -9.024366,
+      "longitud": -78.612131
+    },
+    {
+      "cliente": "Colchado Cordova, Julian Gumercindo",
+      "latitud": -9.024325,
+      "longitud": -78.612178
+    },
+    {
+      "cliente": "Evangelista Herrera, Aide Gladys",
+      "latitud": -9.02384,
+      "longitud": -78.61092
+    },
+    {
+      "cliente": "Angie cerveza",
+      "latitud": -9.022349,
+      "longitud": -78.611973
+    },
+    {
+      "cliente": "Manrique Alvarez, Franci Rosario",
+      "latitud": -9.02226,
+      "longitud": -78.617185
+    },
+    {
+      "cliente": "Blas Burgos, Breidy Yameli",
+      "latitud": -9.029169,
+      "longitud": -78.617647
+    },
+    {
+      "cliente": "Lucero",
+      "latitud": -9.02836582,
+      "longitud": -78.61802742
+    },
+    {
+      "cliente": "VASQUEZ SANCHEZ, NILTON",
+      "latitud": -9.030064,
+      "longitud": -78.619128
+    },
+    {
+      "cliente": "Roncal Solorzano, Juana Soledad",
+      "latitud": -9.02991,
+      "longitud": -78.61754
+    },
+    {
+      "cliente": "Ucanan Castro, Richard Alexander",
+      "latitud": -9.029443,
+      "longitud": -78.616514
+    },
+    {
+      "cliente": "Cipriano Reyes, Carlos Manuel",
+      "latitud": -9.02948,
+      "longitud": -78.61633
+    },
+    {
+      "cliente": "Yarihuaman Trejo De Mendoza,Teodol",
+      "latitud": -9.02712,
+      "longitud": -78.61654
+    },
+    {
+      "cliente": "Benites Aranda, Felicita Jovina",
+      "latitud": -9.0267764,
+      "longitud": -78.6176043
+    },
+    {
+      "cliente": "Gonzales Cruz, Edith Nicolasa",
+      "latitud": -9.02674,
+      "longitud": -78.618052
+    },
+    {
+      "cliente": "De La Cruz Pinedo, Ruth Abigail",
+      "latitud": -9.0260274,
+      "longitud": -78.6175343
+    },
+    {
+      "cliente": "Cortez Caballero, Luis Alberto",
+      "latitud": -9.026173,
+      "longitud": -78.616953
+    },
+    {
+      "cliente": "Natividad Pascual, Adela Albina",
+      "latitud": -9.0257571,
+      "longitud": -78.6169146
+    },
+    {
+      "cliente": "Campomanes Quispe, Javier Jhosemir",
+      "latitud": -9.02529429,
+      "longitud": -78.61613828
+    },
+    {
+      "cliente": "Cotos Morales, Sonia Beatriz",
+      "latitud": -9.0239339,
+      "longitud": -78.6158849
+    },
+    {
+      "cliente": "Juana Ysabel, Pinedo Yovera",
+      "latitud": -9.022803,
+      "longitud": -78.6167108
+    },
+    {
+      "cliente": "Valverde Montero, Elizabeth Ines",
+      "latitud": -9.070948,
+      "longitud": -78.595827
+    }
+  ]
+}
