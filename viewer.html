@@ -50,6 +50,11 @@
   mapboxgl.accessToken = 'pk.eyJ1IjoiZGVnZ292IiwiYSI6ImNtaW8yam5hNjAyYmIzY3B6ZXM3eXIzOHYifQ.NyysuDyZRFfE2ZE4qvG-kA';
 
   async function loadRouteAndDraw() {
+    // Obtener parámetro bk de la URL
+    const params = new URLSearchParams(window.location.search);
+    const bk = params.get("bk") || "BK4802";  // default
+
+    
     // 1) Cargar GeoJSON de puntos
     const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
 
