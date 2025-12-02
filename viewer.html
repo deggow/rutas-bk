@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Navegación OSRM + MapLibre</title>
+  <title>Navegación OSRM + MapLibre + OSM</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
   <!-- MapLibre GL JS -->
@@ -34,6 +34,7 @@
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.25);
       font-size: 12px;
+      z-index: 10;
     }
     #panel h3 {
       margin-top: 0;
@@ -60,15 +61,15 @@ async function loadRouteAndDraw() {
   // 1) Cargar GeoJSON
   const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
 
-  // 2) Ordenar puntos por seq
+  // 2) Ordenar puntos por secuencia
   const sorted = geo.features.slice().sort((a, b) => a.properties.seq - b.properties.seq);
   const coords = sorted.map(f => f.geometry.coordinates);
 
-  // 3) Construir string OSRM lon,lat;lon,lat;...
+  // 3) Construir string para OSRM
   const coordString = coords.map(c => c.join(",")).join(";");
 
-  // 4) Llamar OSRM (gratuito)
-  const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson&steps=true`;
+  // 4) Llamar OSRM (GRATUITO)
+  const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson&steps=false`;
   const data = await fetch(url).then(r => r.json());
 
   if (!data.routes || !data.routes.length) {
@@ -80,17 +81,17 @@ async function loadRouteAndDraw() {
   const route = data.routes[0];
   const routeGeom = route.geometry;
 
-  // 5) Crear mapa con MapLibre
+  // 5) Crear mapa con MapLibre usando OSM Bright
   const map = new maplibregl.Map({
     container: "map",
-    style: "https://demotiles.maplibre.org/style.json",
+    style: "https://tiles.stadiamaps.com/styles/osm_bright/style.json",
     center: coords[0],
     zoom: 15
   });
 
   map.on("load", () => {
 
-    // 6) Dibujar ruta OSRM
+    // 6) Dibujar la ruta OSRM
     map.addSource("route", {
       type: "geojson",
       data: {
@@ -104,12 +105,12 @@ async function loadRouteAndDraw() {
       type: "line",
       source: "route",
       paint: {
-        "line-width": 6,
+        "line-width": 5,
         "line-color": "#007AFF"
       }
     });
 
-    // 7) Dibujar puntos
+    // 7) Dibujar puntos (clientes)
     map.addSource("stops", { type: "geojson", data: geo });
 
     map.addLayer({
@@ -124,12 +125,12 @@ async function loadRouteAndDraw() {
       }
     });
 
-    // 8) Ajustar vista completa
+    // 8) Ajustar vista a la ruta completa
     const bounds = new maplibregl.LngLatBounds();
     routeGeom.coordinates.forEach(c => bounds.extend(c));
     map.fitBounds(bounds, { padding: 40 });
 
-    // 9) Panel de CLIENTES en secuencia
+    // 9) Panel con lista de clientes
     const panel = document.getElementById("panel");
 
     panel.innerHTML =
@@ -137,6 +138,7 @@ async function loadRouteAndDraw() {
       sorted.map((p, i) =>
         `<div class="cliente"><b>${i + 1}.</b> ${p.properties.cliente}</div>`
       ).join("");
+
   });
 }
 
