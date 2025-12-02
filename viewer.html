@@ -51,7 +51,7 @@
 
   async function loadRouteAndDraw() {
     // 1) Cargar GeoJSON de puntos
-    const geo = await fetch('BK4802.geojson').then(r => r.json());
+    const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
 
     // 2) Ordenar por 'seq'
     const sorted = geo.features.slice().sort((a, b) => {
