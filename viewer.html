@@ -1,207 +1,411 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Ruta del Camión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
   <style>
+    :root{
+      --panel-w: 320px;
+      --panel-h-mobile: 260px;
+      --btn-gap: 10px;
+      --shadow: 0 8px 20px rgba(0,0,0,.18);
+      --blue: #1976D2;
+      --green: #2E7D32;
+      --red: #D32F2F;
+      --gray: #607D8B;
+    }
+
     html, body {
       margin: 0;
       height: 100%;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #fff;
       overflow: hidden;
     }
 
-    /* ============ MAPA ============ */
-    #map {
-      position: absolute;
-      top: 0;
-      left: 320px;
-      right: 0;
-      bottom: 0;
-    }
-
-    /* ============ PANEL ============ */
+    /* Layout desktop */
     #panel {
       position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 320px;
+      left: 0; top: 0; bottom: 0;
+      width: var(--panel-w);
       overflow-y: auto;
       background: #fff;
-      padding: 12px;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+      padding: 12px 12px 110px 12px; /* deja espacio para botones en desktop */
+      box-shadow: 2px 0 12px rgba(0,0,0,0.15);
       z-index: 10;
     }
 
-    #panel h3 {
-      margin-top: 0;
+    #map {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: var(--panel-w);
+      right: 0;
     }
 
+    /* Header panel */
+    .panel-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .title{
+      margin: 0;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .subtitle{
+      margin: 0;
+      font-size: 12px;
+      color: #455A64;
+    }
+
+    /* Lista clientes */
     .cliente {
-      padding: 6px 0;
+      padding: 10px 8px;
       border-bottom: 1px solid #eee;
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .cliente:hover { background: #f6f8fb; }
+    .badge{
+      min-width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 800;
+      font-size: 12px;
+      color: #fff;
+      background: var(--gray);
+      flex: 0 0 auto;
+    }
+    .cliente .name{
+      font-size: 13px;
+      line-height: 1.25;
+    }
+    .cliente small{
+      display:block;
+      margin-top: 2px;
+      color:#607D8B;
+      font-size: 11px;
     }
 
-    /* ============ BOTONES (Desktop) ============ */
+    .cliente.current{
+      background: #E3F2FD;
+    }
+    .cliente.current .badge{
+      background: var(--blue);
+    }
+    .cliente.done{
+      opacity: .75;
+    }
+    .cliente.done .badge{
+      background: var(--green);
+    }
+
+    /* Botonera */
     .floating-buttons {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      right: 18px;
+      bottom: 18px;
+      width: 280px;
       display: grid;
-      grid-template-columns: 120px 120px;
-      grid-template-rows: 60px 60px;
-      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--btn-gap);
       z-index: 20;
     }
 
-    .btn {
+    .btn{
       border: none;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 600;
-      color: white;
-      background: #1976D2;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+      border-radius: 14px;
+      padding: 14px 12px;
+      font-weight: 800;
+      font-size: 14px;
+      color: #fff;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn:active{ transform: translateY(1px); opacity:.92; }
+
+    .btn.start { background: var(--blue); }
+    .btn.goto  { background: #1565C0; }
+    .btn.done  { background: var(--green); }
+    .btn.end   { background: var(--red); }
+
+    .btn[disabled]{
+      opacity: .5;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
     }
 
-    .btn:active {
-      opacity: 0.7;
+    .hint{
+      margin-top: 8px;
+      padding: 10px;
+      background: #F7F9FC;
+      border: 1px solid #EEF2F7;
+      border-radius: 12px;
+      font-size: 12px;
+      color: #37474F;
     }
 
-    /* ====================================================
-       ===============   MODO MÓVIL   ======================
-       ==================================================== */
+    /* ====================== MOBILE ====================== */
+    @media (max-width: 768px){
 
-    @media (max-width: 768px) {
+      #map{
+        left: 0;
+        bottom: var(--panel-h-mobile);
+      }
 
-      /* Panel abajo como drawer */
-      #panel {
+      #panel{
         width: 100%;
-        height: 230px;
-        bottom: 0;
+        height: var(--panel-h-mobile);
         top: auto;
+        bottom: 0;
         left: 0;
-        overflow-y: scroll;
+        padding: 12px 12px 12px 12px;
+        box-shadow: 0 -10px 25px rgba(0,0,0,0.18);
       }
 
-      /* Mapa ocupa arriba */
-      #map {
-        left: 0 !important;
-        right: 0;
-        top: 0;
-        bottom: 230px;
-      }
-
-      /* Botones estilo app móvil */
-      .floating-buttons {
+      .floating-buttons{
         position: fixed;
-        bottom: 240px;
         left: 0;
-        width: 100%;
-        padding: 10px;
-        display: grid;
+        right: 0;
+        bottom: calc(var(--panel-h-mobile) + 10px);
+        width: auto;
+        padding: 0 12px;
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
       }
 
-      .btn {
-        height: 55px;
-        font-size: 16px;
-        border-radius: 12px;
+      .btn{
+        padding: 16px 10px;
+        font-size: 15px;
+        border-radius: 16px;
       }
     }
   </style>
 </head>
 
 <body>
+  <div id="panel">
+    <div class="panel-header">
+      <div>
+        <p class="title" id="panelTitle">Cargando...</p>
+        <p class="subtitle" id="panelSub">—</p>
+      </div>
+    </div>
+    <div class="hint" id="panelHint">
+      Tip: toca un cliente para seleccionar el punto actual. El estado se guarda automáticamente.
+    </div>
+    <div id="clientesList" style="margin-top:10px;">
+      <em>Cargando clientes...</em>
+    </div>
+  </div>
 
-  <!-- Panel de clientes -->
-  <div id="panel"><em>Cargando clientes...</em></div>
-
-  <!-- Mapa -->
   <div id="map"></div>
 
-  <!-- Botonera -->
   <div class="floating-buttons">
-    <button id="startBtn" class="btn">Iniciar Ruta</button>
-    <button id="gotoBtn" class="btn">Ir al punto</button>
-    <button id="doneBtn" class="btn">He terminado</button>
-    <button id="endBtn" class="btn" style="background:#D32F2F">Terminar Ruta</button>
+    <button id="startBtn" class="btn start">Iniciar ruta</button>
+    <button id="gotoBtn"  class="btn goto">Ir al punto</button>
+    <button id="doneBtn"  class="btn done">Terminé punto</button>
+    <button id="endBtn"   class="btn end">Terminar ruta</button>
   </div>
 
   <script>
+    let bk = "BK4802";
     let sorted = [];
+    let coords = [];
     let currentIndex = 0;
 
-    function openGoogleMaps(origin, destination) {
-      const url = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lng}&destination=${destination.lat},${destination.lng}&travelmode=driving`;
-      window.open(url, "_blank");
+    // ======= Persistencia =======
+    const stateKey = () => `routesbk:${bk}:state`;
+    function loadState(){
+      try{
+        const raw = localStorage.getItem(stateKey());
+        if(!raw) return { currentIndex: 0, done: {} };
+        const s = JSON.parse(raw);
+        return {
+          currentIndex: Number.isFinite(s.currentIndex) ? s.currentIndex : 0,
+          done: s.done && typeof s.done === "object" ? s.done : {}
+        };
+      }catch{
+        return { currentIndex: 0, done: {} };
+      }
+    }
+    function saveState(state){
+      localStorage.setItem(stateKey(), JSON.stringify(state));
     }
 
+    // ======= Google Maps link (SIN pedir geoloc del navegador) =======
+    // Si NO mandas origin, Google Maps usa "Tu ubicación" automáticamente.
+    function openGoogleMapsTo(lat, lng) {
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`;
+      // En móvil, abrir en misma pestaña suele funcionar mejor (evita bloqueos).
+      window.location.href = url;
+    }
+
+    // ======= UI Panel =======
+    function renderPanel(state){
+      const title = document.getElementById("panelTitle");
+      const sub = document.getElementById("panelSub");
+      const list = document.getElementById("clientesList");
+
+      title.textContent = `Clientes ${bk}`;
+      sub.textContent = `Punto actual: ${Math.min(currentIndex+1, sorted.length)} / ${sorted.length}`;
+
+      list.innerHTML = sorted.map((f, i) => {
+        const seq = f.properties.seq ?? (i+1);
+        const name = f.properties.cliente ?? "Sin nombre";
+        const done = !!state.done[i];
+        const cls = [
+          "cliente",
+          i === currentIndex ? "current" : "",
+          done ? "done" : ""
+        ].join(" ").trim();
+
+        return `
+          <div class="${cls}" data-idx="${i}">
+            <div class="badge">${done ? "✓" : seq}</div>
+            <div class="name">
+              ${name}
+              <small>${i === currentIndex ? "Seleccionado" : (done ? "Completado" : "Pendiente")}</small>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      // Click en un cliente => set currentIndex
+      list.querySelectorAll(".cliente").forEach(el => {
+        el.addEventListener("click", () => {
+          const idx = Number(el.getAttribute("data-idx"));
+          if(Number.isFinite(idx)) {
+            currentIndex = idx;
+            state.currentIndex = currentIndex;
+            saveState(state);
+            renderPanel(state);
+            updateButtons(state);
+          }
+        });
+      });
+    }
+
+    function updateButtons(state){
+      const startBtn = document.getElementById("startBtn");
+      const gotoBtn  = document.getElementById("gotoBtn");
+      const doneBtn  = document.getElementById("doneBtn");
+      const endBtn   = document.getElementById("endBtn");
+
+      startBtn.disabled = sorted.length === 0;
+      gotoBtn.disabled  = sorted.length === 0;
+      doneBtn.disabled  = sorted.length === 0;
+
+      const atEnd = currentIndex >= sorted.length;
+      if(atEnd){
+        gotoBtn.disabled = true;
+        doneBtn.disabled = true;
+      }
+
+      // Etiquetas dinámicas
+      gotoBtn.textContent = `Ir al punto ${Math.min(currentIndex+1, sorted.length)}`;
+      doneBtn.textContent = `Terminé punto ${Math.min(currentIndex+1, sorted.length)}`;
+
+      // Terminar solo desactiva/limpia
+      endBtn.textContent = "Terminar ruta";
+    }
+
+    // ======= Init principal =======
     async function init() {
       const params = new URLSearchParams(window.location.search);
-      const bk = params.get("bk") || "BK4802";
+      bk = params.get("bk") || "BK4802";
 
+      // Cargar geojson
       const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
-      sorted = geo.features.slice().sort((a, b) => a.properties.seq - b.properties.seq);
-      const coords = sorted.map(f => ({
-        lat: f.geometry.coordinates[1],
-        lng: f.geometry.coordinates[0]
-      }));
 
-      /** ========== Render Mapa Google ========== **/
+      // Orden
+      sorted = geo.features.slice().sort((a,b)=> (a.properties.seq ?? 0) - (b.properties.seq ?? 0));
+      coords = sorted.map(f => ({ lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] }));
+
+      // Estado persistido
+      const state = loadState();
+      currentIndex = Math.min(Math.max(state.currentIndex, 0), Math.max(sorted.length-1, 0));
+      state.currentIndex = currentIndex;
+      saveState(state);
+
+      // Mapa Google
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
-        center: coords[0]
+        center: coords[0] || {lat:-12.0464, lng:-77.0428}, // fallback
+        mapTypeControl: false,
+        fullscreenControl: true,
+        streetViewControl: false
       });
 
-      sorted.forEach((f, i) => {
+      // Marcadores (solo visual)
+      sorted.forEach((f,i)=>{
         new google.maps.Marker({
           position: coords[i],
           map,
-          label: `${i + 1}`
+          label: `${i+1}`,
         });
       });
 
-      /** ========== Panel de Clientes ========== **/
-      document.getElementById("panel").innerHTML =
-        `<h3>Clientes ${bk}</h3>` +
-        sorted.map(f => `
-          <div class="cliente"><b>${f.properties.seq}.</b> ${f.properties.cliente}</div>
-        `).join("");
+      // Panel
+      renderPanel(state);
+      updateButtons(state);
 
-      /** ================= BOTONES ================= **/
-
-      // 1) INICIAR RUTA
-      startBtn.onclick = () => {
+      // ========= Botones =========
+      document.getElementById("startBtn").onclick = () => {
         currentIndex = 0;
-        const first = coords[0];
-        const defaultOrigin = "My+Location";
-        openGoogleMaps({lat:0,lng:0, fake:true}, first);
+        state.currentIndex = 0;
+        saveState(state);
+        renderPanel(state);
+        updateButtons(state);
+        // Abrir Google Maps hacia punto 1 (Google usa tu ubicación actual)
+        openGoogleMapsTo(coords[0].lat, coords[0].lng);
       };
 
-      // 2) IR AL PUNTO N
-      gotoBtn.onclick = () => {
-        if (currentIndex >= coords.length) return;
-        openGoogleMaps({lat:0,lng:0, fake:true}, coords[currentIndex]);
+      document.getElementById("gotoBtn").onclick = () => {
+        if(!coords[currentIndex]) return;
+        openGoogleMapsTo(coords[currentIndex].lat, coords[currentIndex].lng);
       };
 
-      // 3) HE TERMINADO EL PUNTO N
-      doneBtn.onclick = () => {
-        currentIndex++;
-        if (currentIndex >= coords.length) {
-          alert("Ruta completada.");
+      document.getElementById("doneBtn").onclick = () => {
+        // Marca completado el punto actual
+        state.done[currentIndex] = true;
+
+        // Avanza SOLO si el punto actual está completado
+        // (tu regla: si no confirmaron punto N, "Ir al punto" se queda en N)
+        const next = currentIndex + 1;
+        if(next < coords.length){
+          currentIndex = next;
+          state.currentIndex = currentIndex;
+        } else {
+          // Terminó todos
+          state.currentIndex = coords.length; // fuera de rango => fin
         }
+
+        saveState(state);
+        renderPanel(state);
+        updateButtons(state);
       };
 
-      // 4) TERMINAR RUTA
-      endBtn.onclick = () => {
-        alert("Ruta finalizada. Buen trabajo.");
+      document.getElementById("endBtn").onclick = () => {
+        // Aquí puedes “loggear”: por ahora guardamos timestamp de cierre
+        state.endedAt = new Date().toISOString();
+        saveState(state);
+
+        alert("Ruta finalizada. Se guardó el estado.");
       };
     }
-
   </script>
 
 
