@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Ruta del Camión</title>
+
   <style>
     html, body {
       margin: 0;
       height: 100%;
       font-family: system-ui, sans-serif;
+      overflow: hidden;
     }
 
+    /* ============ MAPA ============ */
     #map {
       position: absolute;
-      top: 0; bottom: 0; right: 0; left: 320px;
+      top: 0;
+      left: 320px;
+      right: 0;
+      bottom: 0;
     }
 
+    /* ============ PANEL ============ */
     #panel {
       position: absolute;
-      top: 0; left: 0;
-      width: 320px;
+      left: 0;
+      top: 0;
       bottom: 0;
+      width: 320px;
       overflow-y: auto;
       background: #fff;
       padding: 12px;
@@ -27,214 +35,175 @@
       z-index: 10;
     }
 
-    /* ===== BOTONES 2x2 ===== */
-    #controlGrid {
+    #panel h3 {
+      margin-top: 0;
+    }
+
+    .cliente {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* ============ BOTONES (Desktop) ============ */
+    .floating-buttons {
       position: absolute;
       bottom: 20px;
       right: 20px;
-      width: 250px;
-      height: 250px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: 120px 120px;
+      grid-template-rows: 60px 60px;
+      gap: 10px;
       z-index: 20;
     }
 
-    #controlGrid button {
-      padding: 15px;
-      background: #1976D2;
-      color: white;
+    .btn {
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 15px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+      font-weight: 600;
+      color: white;
+      background: #1976D2;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.25);
     }
 
-    #controlGrid button:disabled {
-      background: #9ea3a8;
-      cursor: not-allowed;
+    .btn:active {
+      opacity: 0.7;
+    }
+
+    /* ====================================================
+       ===============   MODO MÓVIL   ======================
+       ==================================================== */
+
+    @media (max-width: 768px) {
+
+      /* Panel abajo como drawer */
+      #panel {
+        width: 100%;
+        height: 230px;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        overflow-y: scroll;
+      }
+
+      /* Mapa ocupa arriba */
+      #map {
+        left: 0 !important;
+        right: 0;
+        top: 0;
+        bottom: 230px;
+      }
+
+      /* Botones estilo app móvil */
+      .floating-buttons {
+        position: fixed;
+        bottom: 240px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .btn {
+        height: 55px;
+        font-size: 16px;
+        border-radius: 12px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Panel de clientes -->
   <div id="panel"><em>Cargando clientes...</em></div>
+
+  <!-- Mapa -->
   <div id="map"></div>
 
-  <!-- GRID DE BOTONES -->
-  <div id="controlGrid">
-    <button id="btnStart">Iniciar<br>Ruta</button>
-    <button id="btnGoto">Ir al<br>punto N</button>
-    <button id="btnArrived">He terminado<br>punto N</button>
-    <button id="btnEnd">Terminar<br>Ruta</button>
+  <!-- Botonera -->
+  <div class="floating-buttons">
+    <button id="startBtn" class="btn">Iniciar Ruta</button>
+    <button id="gotoBtn" class="btn">Ir al punto</button>
+    <button id="doneBtn" class="btn">He terminado</button>
+    <button id="endBtn" class="btn" style="background:#D32F2F">Terminar Ruta</button>
   </div>
 
   <script>
     let sorted = [];
-    let coords = [];
-    let map, directionsRenderer;
-    let currentIndex = 0;      // punto actual
-    let hasArrived = false;    // si llegó o no
+    let currentIndex = 0;
 
-    function loadState() {
-      currentIndex = Number(localStorage.getItem("currentIndex") || 0);
-      hasArrived = localStorage.getItem("hasArrived") === "true";
-      updateButtons();
-    }
-
-    function saveState() {
-      localStorage.setItem("currentIndex", currentIndex);
-      localStorage.setItem("hasArrived", hasArrived);
-      updateButtons();
-    }
-
-    function updateButtons() {
-      document.getElementById("btnGoto").innerHTML = "Ir al<br>punto " + (currentIndex+1);
-      document.getElementById("btnArrived").innerHTML = "He terminado<br>punto " + (currentIndex+1);
-
-      document.getElementById("btnStart").disabled = currentIndex > 0;  
-      document.getElementById("btnGoto").disabled = false;
-      document.getElementById("btnArrived").disabled = false;
-
-      if (currentIndex >= sorted.length - 1) {
-        document.getElementById("btnArrived").disabled = true;
-      }
+    function openGoogleMaps(origin, destination) {
+      const url = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lng}&destination=${destination.lat},${destination.lng}&travelmode=driving`;
+      window.open(url, "_blank");
     }
 
     async function init() {
-      loadState();
-
       const params = new URLSearchParams(window.location.search);
       const bk = params.get("bk") || "BK4802";
 
-      // Cargar GeoJSON
       const geo = await fetch(`public/${bk}.geojson`).then(r => r.json());
-      sorted = geo.features.slice().sort((a,b)=> a.properties.seq - b.properties.seq);
-
-      // Panel de clientes
-      document.getElementById("panel").innerHTML =
-        `<h3>Clientes ${bk}</h3>` +
-        sorted.map(f =>
-          `<div><b>${f.properties.seq}.</b> ${f.properties.cliente}</div>`
-        ).join("");
-
-      coords = sorted.map(f => ({
+      sorted = geo.features.slice().sort((a, b) => a.properties.seq - b.properties.seq);
+      const coords = sorted.map(f => ({
         lat: f.geometry.coordinates[1],
         lng: f.geometry.coordinates[0]
       }));
 
-      // Inicializar Google Map
-      map = new google.maps.Map(document.getElementById("map"), {
+      /** ========== Render Mapa Google ========== **/
+      const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: coords[0]
       });
 
-      // Dibujar marcadores numerados
       sorted.forEach((f, i) => {
         new google.maps.Marker({
-          position: { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] },
+          position: coords[i],
           map,
-          label: `${i+1}`
+          label: `${i + 1}`
         });
       });
 
-      // Dibujar la ruta completa con OSRM
-      drawFullRouteWithOSRM();
+      /** ========== Panel de Clientes ========== **/
+      document.getElementById("panel").innerHTML =
+        `<h3>Clientes ${bk}</h3>` +
+        sorted.map(f => `
+          <div class="cliente"><b>${f.properties.seq}.</b> ${f.properties.cliente}</div>
+        `).join("");
 
-      // Conectar botones
-      document.getElementById("btnStart").onclick = startRoute;
-      document.getElementById("btnGoto").onclick = gotoCurrentPoint;
-      document.getElementById("btnArrived").onclick = confirmArrived;
-      document.getElementById("btnEnd").onclick = endRoute;
+      /** ================= BOTONES ================= **/
 
-      updateButtons();
-    }
+      // 1) INICIAR RUTA
+      startBtn.onclick = () => {
+        currentIndex = 0;
+        const first = coords[0];
+        const defaultOrigin = "My+Location";
+        openGoogleMaps({lat:0,lng:0, fake:true}, first);
+      };
 
-    async function drawFullRouteWithOSRM() {
-      const coordString = coords.map(c => `${c.lng},${c.lat}`).join(";");
-      const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson`;
-      const data = await fetch(url).then(r => r.json());
+      // 2) IR AL PUNTO N
+      gotoBtn.onclick = () => {
+        if (currentIndex >= coords.length) return;
+        openGoogleMaps({lat:0,lng:0, fake:true}, coords[currentIndex]);
+      };
 
-      if (!data.routes?.length) return;
-
-      const routeGeom = data.routes[0].geometry;
-
-      new google.maps.Polyline({
-        path: routeGeom.coordinates.map(c => ({ lng: c[0], lat: c[1] })),
-        map: map,
-        strokeColor: "#007AFF",
-        strokeWeight: 5
-      });
-    }
-
-    // ===== BOTÓN 1 — INICIAR RUTA =====
-    async function startRoute() {
-      currentIndex = 0;
-      hasArrived = false;
-      saveState();
-
-      const userPos = await getCurrentLocation();
-      const dest = coords[0];
-      openGoogleMaps(userPos, dest);
-    }
-
-    // ===== BOTÓN 2 — IR AL PUNTO ACTUAL =====
-    async function gotoCurrentPoint() {
-      const userPos = await getCurrentLocation();
-      const dest = coords[currentIndex];  
-      openGoogleMaps(userPos, dest);
-    }
-
-    // ===== BOTÓN 3 — CONFIRMAR LLEGADA =====
-    function confirmArrived() {
-      hasArrived = true;
-
-      if (currentIndex < sorted.length - 1) {
+      // 3) HE TERMINADO EL PUNTO N
+      doneBtn.onclick = () => {
         currentIndex++;
-        hasArrived = false;
-      }
+        if (currentIndex >= coords.length) {
+          alert("Ruta completada.");
+        }
+      };
 
-      saveState();
-      alert("Punto completado. Ahora puedes ir al siguiente.");
+      // 4) TERMINAR RUTA
+      endBtn.onclick = () => {
+        alert("Ruta finalizada. Buen trabajo.");
+      };
     }
 
-    // ===== BOTÓN 4 — FINALIZAR RUTA =====
-    function endRoute() {
-      localStorage.removeItem("currentIndex");
-      localStorage.removeItem("hasArrived");
-      alert("Ruta finalizada.");
-    }
-
-    // ===== UTILIDADES =====
-
-    async function getCurrentLocation() {
-      return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(
-          pos => resolve({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
-          err => reject(err),
-          { enableHighAccuracy: true }
-        );
-      });
-    }
-
-    function openGoogleMaps(origin, dest) {
-      const url =
-        `https://www.google.com/maps/dir/?api=1` +
-        `&origin=${origin.lat},${origin.lng}` +
-        `&destination=${dest.lat},${dest.lng}` +
-        `&travelmode=driving`;
-
-      window.open(url, "_blank");
-    }
   </script>
 
-  <!-- Sustituye YOUR_GOOGLE_MAPS_API_KEY por tu key real -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkDF9OBntDCALLQsi4McjampEMebMBQkc&callback=init"
-    async
-    defer
-  ></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkDF9OBntDCALLQsi4McjampEMebMBQkc&callback=init" async defer></script>
 </body>
 </html>
